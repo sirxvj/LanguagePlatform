@@ -6,7 +6,7 @@ Description:<br />
 1. Cоздавать уникальный материал для обучения<br />
 2. Пользоваться материалом созданным другими пользователями в целях обучения<br />
 
-   Приложение имеет систему модерации:<br />
+Приложение имеет систему модерации:<br />
 Имеются две роли: Regular и Moderatior<br />
 Модератор может самостоятельно производить публикации и одобрять запросы на публикации от обычных пользователей<br />
 По умолчанию при регистрации пользователь имеет роль Regular, <br />
@@ -20,5 +20,7 @@ Description:<br />
 
 
 Entity Relationship Diagram:
-![ERD_OOP3](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/0cda20df-1f3b-4fbd-a25e-a617c08fb3ad)
+![ERD_OOP4](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/d52f795c-22d9-49b1-bd7b-94571026893a)
 
+Class diagram:
+![ServiceS](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/e93176f5-9a6b-41d3-8cfc-0cf20bbd2d4d)
