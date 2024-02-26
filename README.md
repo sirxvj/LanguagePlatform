@@ -22,5 +22,7 @@ Description:<br />
 Entity Relationship Diagram:
 ![ERD_OOP4](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/d52f795c-22d9-49b1-bd7b-94571026893a)
 
-Class diagram:
+<br />
+Class diagram:<br />
+
 ![ServiceS](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/e93176f5-9a6b-41d3-8cfc-0cf20bbd2d4d)
