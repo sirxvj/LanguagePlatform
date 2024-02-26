@@ -29,3 +29,8 @@ Entity Relationship Diagram:<br />
 Class diagram:<br />
 
 ![ServiceS](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/e93176f5-9a6b-41d3-8cfc-0cf20bbd2d4d)
+
+Architecture approach:<br />
+
+![ntier](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/62241ef9-8819-4358-8e0a-7dc0fb6c6099)
+
