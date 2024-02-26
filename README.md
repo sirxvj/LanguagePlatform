@@ -4,4 +4,4 @@ Language learning platform
 Description:
 
 Entity Relationship Diagram:
-![OOP_LLP_ERD](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/e3252454-27b9-47c7-a176-dfdb40927dfd)
+![ERD_OOP2](https://github.com/sirxvj/OOP_COURSE_WORK/assets/119608123/3af43fc8-ff1d-457d-b017-70b6b2165217)
