@@ -1,0 +1,120 @@
+{
+  "root": {
+    "Domain.Entities.User": [
+      {
+        "Id": "1be6f999-1737-4748-b700-9fc0decb980d",
+        "Username": "User",
+        "PasswordHash": "ER5Y4MfuF46BP6ablaUT0rzrd4mBEzlbPlPX9IWEkag=",
+        "PasswordSalt": "Drq9qR1AJfu2E2VTBGhX4DP5TMEvAJjxI+K2wuuYHJCQGbBzt6pLnsxAmTPZF4KxcXoSagbQH+clOSB5EXH7hw==",
+        "Email": "email",
+        "Role": 1,
+        "Lessons": null
+      },
+      {
+        "Id": "c3c3df62-a539-48c4-bc2d-a6ef59524f2d",
+        "Username": "GigaNiga",
+        "PasswordHash": "bwsN7RgOsaS8ZfptIClqGnQZwFVkFNRx+1YjXpRDaRI=",
+        "PasswordSalt": "TJQvJirw/Ymor3mwtPX5ftRvrNULaR1NWyCSY1T/jsx3q3XpK1zxc/VbAS+OHVd8c+EC3CQBIp5IXPV5dgrx3Q==",
+        "Email": "email",
+        "Role": 1,
+        "Lessons": null
+      },
+      {
+        "Id": "ffff959f-00fa-4a79-9ad3-ffa8b448b202",
+        "Username": "BigDig228",
+        "PasswordHash": "IJoxRi7Cpicw8t0MGiw7TwLJQoyPZQC0b3BhfA8m16U=",
+        "PasswordSalt": "N5lXFMJDdnO/IWA1YA+6CzGZKxMwfSpYNNoaoSs4KdbyzpBbMLd7ALUkzQN+29MvMbA5tKRBXu85jTXHVyN39g==",
+        "Email": "email",
+        "Role": 1,
+        "Lessons": null
+      }
+    ],
+    "Domain.Entities.Category": [
+      {
+        "Id": "72bf8be1-7127-4401-b0af-e26baa1c5b7e",
+        "Name": "Easy",
+        "Lessons": null
+      },
+      {
+        "Id": "01d9bbdc-92b8-4f29-adac-d52f4681ec86",
+        "Name": "Medium",
+        "Lessons": null
+      },
+      {
+        "Id": "75e06f38-f8a1-4c6c-9adb-363fa92fa124",
+        "Name": "Hard",
+        "Lessons": null
+      }
+    ],
+    "Domain.Entities.Language": [
+      {
+        "Id": "2ee60e41-4251-4884-bd84-ca497a6f34af",
+        "Name": "English",
+        "Lessons": null
+      },
+      {
+        "Id": "389bd972-02f1-47f1-96d0-c29830f8a71c",
+        "Name": "Espaniol",
+        "Lessons": null
+      },
+      {
+        "Id": "4f16abdb-a177-4a88-87d4-b24ab718bece",
+        "Name": "Russian",
+        "Lessons": null
+      }
+    ],
+    "Domain.Entities.Lesson": [
+      {
+        "Id": "c408926c-9dd6-43d7-9a26-92193ff2dc14",
+        "Approved": false,
+        "CreatedAt": "2024-03-24T16:15:37.0679946+03:00",
+        "AverageRate": 0.0,
+        "LanguageId": "389bd972-02f1-47f1-96d0-c29830f8a71c",
+        "CreatorId": "c3c3df62-a539-48c4-bc2d-a6ef59524f2d",
+        "Language": null,
+        "Creator": null,
+        "Test": null,
+        "Reviews": null,
+        "Category": null,
+        "Medias": null
+      }
+    ],
+    "Domain.Entities.Test": [
+      {
+        "Id": "1317b5c7-99a3-4549-8e30-0810d6931095",
+        "Title": "Test title",
+        "Description": "Test description",
+        "LessonId": "c408926c-9dd6-43d7-9a26-92193ff2dc14",
+        "QuestionItems": null,
+        "Lesson": null
+      }
+    ],
+    "Domain.Entities.QuestionItem": [
+      {
+        "Id": "8f59311f-d74c-4a32-a7db-6c8db84517fa",
+        "Title": "What the fuck",
+        "Description": "Are you doing motherfucker",
+        "TestId": "1317b5c7-99a3-4549-8e30-0810d6931095",
+        "MediaQuestion": null,
+        "Test": null,
+        "Answers": null
+      }
+    ],
+    "Domain.Entities.AnswerItem": [
+      {
+        "Id": "16bc8f20-adcd-4ef0-9e78-820c1355d24d",
+        "Answer": "Yes",
+        "Accuracy": true,
+        "QuestionItemId": "8f59311f-d74c-4a32-a7db-6c8db84517fa",
+        "QuestionItem": null
+      },
+      {
+        "Id": "3ee8e775-cb83-4905-92b5-172951feb4fb",
+        "Answer": "No",
+        "Accuracy": false,
+        "QuestionItemId": "8f59311f-d74c-4a32-a7db-6c8db84517fa",
+        "QuestionItem": null
+      }
+    ]
+  }
+}
