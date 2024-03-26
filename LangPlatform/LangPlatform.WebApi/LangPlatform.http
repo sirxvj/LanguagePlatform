@@ -1,0 +1,6 @@
+@LangPlatform_HostAddress = http://localhost:5105
+
+GET {{LangPlatform_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
