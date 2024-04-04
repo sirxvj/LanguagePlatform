@@ -15,4 +15,5 @@ public interface IRepository<T> where T : IEntity
     Task UpdateAsync(T entity);
 
     Task<int> Count(Func<T,bool> filter);
+    
 }

@@ -5,7 +5,7 @@ public record LessonDto(
     bool Approved,
     DateTime CreatedAt,
     double Avg,
-    MediaDto Media,
+    // MediaDto Media,
     CreatorDto Creator,
     string Category
     );

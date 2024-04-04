@@ -10,8 +10,12 @@ public static class Extensions
     {
         services.AddSingleton<ITokenService, TokenService>();
         services.AddSingleton<IAccountService, AccountService>();
-        services.AddScoped<ILessonService, LessonService>();
+        services.AddSingleton<ILessonService, LessonService>();
         services.AddSingleton<ITestService, TestService>();
+        services.AddSingleton<ILanguageService, LanguageService>();
+        services.AddSingleton<ICategoryService, CategoryService>();
+        services.AddSingleton<IArticleService, ArticleService>();
+        
         return services;
     }
 }

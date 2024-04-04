@@ -44,6 +44,96 @@
         "Id": "75e06f38-f8a1-4c6c-9adb-363fa92fa124",
         "Name": "Hard",
         "Lessons": null
+      },
+      {
+        "Id": "96709266-780c-4583-b7b3-7bb5a8856721",
+        "Name": "Easy",
+        "Lessons": null
+      },
+      {
+        "Id": "3aebd633-21d8-4ff9-b883-0072634e1baf",
+        "Name": "Medium",
+        "Lessons": null
+      },
+      {
+        "Id": "addeb56e-66c9-4a18-965a-89598aaf1891",
+        "Name": "Hard",
+        "Lessons": null
+      },
+      {
+        "Id": "b733f43a-cc99-4ba3-aeec-1823718aad94",
+        "Name": "Easy",
+        "Lessons": null
+      },
+      {
+        "Id": "7f577341-6a4a-4671-a3f9-b2fa3d301eaf",
+        "Name": "Medium",
+        "Lessons": null
+      },
+      {
+        "Id": "200c7ff6-1a04-431d-a7b4-db63311d3425",
+        "Name": "Hard",
+        "Lessons": null
+      },
+      {
+        "Id": "002df4d6-8dfc-4151-b321-620e8e5c2ec0",
+        "Name": "Easy",
+        "Lessons": null
+      },
+      {
+        "Id": "acec89f2-2b48-4d05-bf09-3a88876a36e4",
+        "Name": "Medium",
+        "Lessons": null
+      },
+      {
+        "Id": "6aba73d6-9ff0-4b85-89e9-b24bf40360d4",
+        "Name": "Hard",
+        "Lessons": null
+      },
+      {
+        "Id": "a7158800-40a3-4a81-b659-b8196e70bfa3",
+        "Name": "Easy",
+        "Lessons": null
+      },
+      {
+        "Id": "53599082-db73-4475-b8b8-eb93466ff3f5",
+        "Name": "Medium",
+        "Lessons": null
+      },
+      {
+        "Id": "d396a389-7702-4537-8d5a-3579d25e73f2",
+        "Name": "Hard",
+        "Lessons": null
+      },
+      {
+        "Id": "d8c26067-3c30-4a8e-a8aa-c60300044ee2",
+        "Name": "Easy",
+        "Lessons": null
+      },
+      {
+        "Id": "764b6f75-2e19-43c8-bafb-dda2d61d1c03",
+        "Name": "Medium",
+        "Lessons": null
+      },
+      {
+        "Id": "005d7b2b-e6cc-447c-b57f-27fa33a827c5",
+        "Name": "Hard",
+        "Lessons": null
+      },
+      {
+        "Id": "6c1d183b-3cb1-4036-a600-634a01192896",
+        "Name": "Easy",
+        "Lessons": null
+      },
+      {
+        "Id": "b69d80ce-f01c-4362-bf46-8d2ca2c3c867",
+        "Name": "Medium",
+        "Lessons": null
+      },
+      {
+        "Id": "6ef9b260-7e8a-4234-bd9f-b699c8bec782",
+        "Name": "Hard",
+        "Lessons": null
       }
     ],
     "Domain.Entities.Language": [
@@ -59,6 +149,96 @@
       },
       {
         "Id": "4f16abdb-a177-4a88-87d4-b24ab718bece",
+        "Name": "Russian",
+        "Lessons": null
+      },
+      {
+        "Id": "a73e29da-a5fb-48f5-bff0-4e49a305a115",
+        "Name": "English",
+        "Lessons": null
+      },
+      {
+        "Id": "fc858973-6ee2-4fa6-95dc-7ef60c1ed47d",
+        "Name": "Espaniol",
+        "Lessons": null
+      },
+      {
+        "Id": "d7c91a01-ce29-4f57-86f0-7d80b9626ca7",
+        "Name": "Russian",
+        "Lessons": null
+      },
+      {
+        "Id": "af60ca29-8bfd-43ad-9274-d75a98aa89eb",
+        "Name": "English",
+        "Lessons": null
+      },
+      {
+        "Id": "44c2495b-137b-484c-b9f6-0ef6b8b4b013",
+        "Name": "Espaniol",
+        "Lessons": null
+      },
+      {
+        "Id": "dfb39056-72e1-4e40-b18b-8ec2bf826289",
+        "Name": "Russian",
+        "Lessons": null
+      },
+      {
+        "Id": "cc1eac89-fe32-44e1-a665-c53fda0d5204",
+        "Name": "English",
+        "Lessons": null
+      },
+      {
+        "Id": "741763ae-3382-4557-a0e9-a77b1ed38d38",
+        "Name": "Espaniol",
+        "Lessons": null
+      },
+      {
+        "Id": "958901a5-3814-4755-ad7b-bdb23b5f16a3",
+        "Name": "Russian",
+        "Lessons": null
+      },
+      {
+        "Id": "99fe6a60-082f-49f1-aa80-ca75ef6faa7f",
+        "Name": "English",
+        "Lessons": null
+      },
+      {
+        "Id": "655e410a-1abb-4e65-a1a9-69a815b00980",
+        "Name": "Espaniol",
+        "Lessons": null
+      },
+      {
+        "Id": "d86392ae-dc55-4c6d-9685-6cd53f3a122d",
+        "Name": "Russian",
+        "Lessons": null
+      },
+      {
+        "Id": "38bf271b-917b-4fc9-9cf3-19fda4f2e254",
+        "Name": "English",
+        "Lessons": null
+      },
+      {
+        "Id": "8d84590e-f497-4b63-9971-028e5f92568a",
+        "Name": "Espaniol",
+        "Lessons": null
+      },
+      {
+        "Id": "545bfcd2-b70c-4644-8c4d-80b582d2a972",
+        "Name": "Russian",
+        "Lessons": null
+      },
+      {
+        "Id": "2dcfd1c0-5047-4614-bdfc-7005c57b8106",
+        "Name": "English",
+        "Lessons": null
+      },
+      {
+        "Id": "832b5ceb-c0a0-4206-96ba-f2d5b0833a6c",
+        "Name": "Espaniol",
+        "Lessons": null
+      },
+      {
+        "Id": "69a1ddf9-1e78-4621-bb1b-57c99c38d6fd",
         "Name": "Russian",
         "Lessons": null
       }

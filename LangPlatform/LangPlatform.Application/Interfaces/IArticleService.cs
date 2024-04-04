@@ -1,8 +1,10 @@
+using Domain.DTOs;
+
 namespace Application.Interfaces;
 
 public interface IArticleService
 {
-    Task Add();
-    Task Edit();
+    Task UploadArticle(CreateArticleDto article);
+    Task<ArticleDto?> DownloadArticle(Guid lessonId);
     
 }

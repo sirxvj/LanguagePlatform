@@ -1,4 +1,3 @@
-using System.Collections;
 using Application.Interfaces;
 using Domain.DTOs;
 using Domain.Entities;
@@ -13,16 +12,14 @@ public class TestService:ITestService
     private readonly IRepository<QuestionItem> _questionRepository;
     private readonly IRepository<AnswerItem> _answerRepository;
     private readonly IRepository<User> _userRepository;
-    private readonly IRepository<Language> _languageRepository;
     private readonly IRepository<Lesson> _lessonRepository;
 
-    public TestService(IRepository<Test> testRepository, IRepository<QuestionItem> questionRepository, IRepository<AnswerItem> answerRepository, IRepository<User> userRepository, IRepository<Language> languageRepository, IRepository<Lesson> lessonRepository)
+    public TestService(IRepository<Test> testRepository, IRepository<QuestionItem> questionRepository, IRepository<AnswerItem> answerRepository, IRepository<User> userRepository, IRepository<Lesson> lessonRepository)
     {
         _testRepository = testRepository;
         _questionRepository = questionRepository;
         _answerRepository = answerRepository;
         _userRepository = userRepository;
-        _languageRepository = languageRepository;
         _lessonRepository = lessonRepository;
     }
 
@@ -33,9 +30,12 @@ public class TestService:ITestService
         Lesson newLesson = test.Lesson.Adapt<Lesson>();
         newLesson.CreatedAt = DateTime.Now;
 
-        User? creator = await _userRepository.GetAsync(test.Lesson.CreatorId);
+        User? creator = await _userRepository.GetAsync(test.Lesson.CreatorId??Guid.Empty);
         newLesson.Approved = creator?.Role == RoleType.Admin;
-        
+
+        if (creator != null) await _userRepository.UpdateAsync(creator);
+
+        newLesson.Test = newTest;
         
         newTest.LessonId = await _lessonRepository.CreateAsync(newLesson);
         
@@ -64,7 +64,7 @@ public class TestService:ITestService
         if (testObj is null)
             return null;
         testObj.Lesson = await _lessonRepository.GetAsync(lessonId);
-        testObj.QuestionItems = (await _questionRepository.GetAllAsync(x => x.TestId == testObj!.Id))!.ToList();
+        testObj.QuestionItems = (await _questionRepository.GetAllAsync(x => x.TestId == testObj.Id))!.ToList();
         foreach (var question in testObj.QuestionItems)
         {
             question!.Answers = ((await _answerRepository.GetAllAsync(x => x.QuestionItemId == question.Id))!).ToList()!;
