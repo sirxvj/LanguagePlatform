@@ -1,0 +1,48 @@
+<div style="height: 93vh; overflow: hidden;"  class="" [ngStyle]="{
+    'background-image': 'url(./assets/HomeBck1.jpg)',
+    'background-position': 'center',
+    'background-size': 'cover',
+    'background-repeat': 'no-repeat'
+    }">
+    <div class="cnt p-5 bg-light d-inline-flex h-100 align-items-md-center"
+    style="width: 45%;--bs-bg-opacity: .8; ">
+        <div *ngIf="registerMode === SignType.Info" style='text-align: center;'>
+            <h1>Learn with us</h1>
+            <p >Join our community and share your experience</p><p>  with whole world</p>
+            <div class="text-center">
+                <button (click)="setToggle(SignType.Reg)" class="btn btn-success btn-lg me-2 ">Sign Up</button>
+                <button (click)="setToggle(SignType.Log)" class="btn btn-outline-success btn-lg me-1">Log In</button>
+            </div>
+        </div>
+        <div *ngIf="registerMode === SignType.Reg"  style='text-align: center;'
+         style="width: 100%;" class="align-items-md-center p-5">
+            <app-register  (cancelRegistration)="setToggle(SignType.Info)"></app-register>      
+        </div>
+        <div *ngIf="registerMode === SignType.Log"   style='text-align: center;'
+        style="width: 100%;" class="align-items-md-center p-5">
+
+            <app-login  (cancelRegistration)="setToggle(SignType.Info)"></app-login>
+
+        </div>    
+    </div>
+    <!-- <div class="container">
+        
+    <div  style='text-align: center;'>
+    <h1>Chat this out</h1>
+    <p class="lead">Modern cutting-edge real-time chat? that provides security and confidense</p>
+    <div class="text-center">
+        <button (click)="setToggle()" class="btn btn-primary btn-lg me-1">Register</button>
+        <button class="btn btn-info btn-lg ms-1">Learn more</button>
+    </div>
+    </div>
+    
+    <div *ngIf="registerMode" class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <app-register  (cancelRegistration)="setToggle()"></app-register>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+</div>
