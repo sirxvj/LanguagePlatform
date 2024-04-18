@@ -26,7 +26,6 @@ public class AccountService:IAccountService
 
         var newUser = new User()
         {
-            Id = Guid.NewGuid(),
             Username = user.Username,
             Email = user.Email,
             Role = RoleType.Readonly,

@@ -8,11 +8,9 @@ public class Article:IEntity
 {
     [Key] public Guid Id { get; set; }
 
-    public string Title { get; set; } = null!;
-
     [ForeignKey("Lesson")] 
     public Guid LessonId { get; set; }
     
-    public Lesson? Lesson { get; set; }
-    public ICollection<Section>? Sections { get; set; }
+    public virtual Lesson? Lesson { get; set; }
+    public virtual ICollection<Section>? Sections { get; set; }
 }

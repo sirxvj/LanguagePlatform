@@ -10,6 +10,7 @@ public class AnswerItem:IEntity
     [Key]
     public Guid Id { get; set; }
 
+    [MaxLength(300)]
     public string Answer { get; set; } = null!;
 
     public bool Accuracy { get; set; }
@@ -17,5 +18,5 @@ public class AnswerItem:IEntity
     [ForeignKey("QuestionItem")]
     public Guid QuestionItemId { get; set; }
 
-    public QuestionItem? QuestionItem { get; set; }
+    public virtual QuestionItem? QuestionItem { get; set; }
 }

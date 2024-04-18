@@ -6,9 +6,9 @@ namespace Application.Services;
 
 public class CategoryService:ICategoryService
 {
-    private readonly IRepository<Category> _repository;
+    private readonly IRepository<Category?> _repository;
 
-    public CategoryService(IRepository<Category> repository)
+    public CategoryService(IRepository<Category?> repository)
     {
         _repository = repository;
     }
@@ -16,5 +16,15 @@ public class CategoryService:ICategoryService
     public async Task<IEnumerable<Category?>?> GetAll()
     {
         return await _repository.GetAllAsync();
+    }
+    
+    public async Task<Category?> GetExact(Guid id)
+    {
+        return await _repository.GetAsync(id);
+    }
+
+    public async Task<Category?> GetExact(string name)
+    {
+        return await _repository.GetAsync(x => x.Name == name);
     }
 }

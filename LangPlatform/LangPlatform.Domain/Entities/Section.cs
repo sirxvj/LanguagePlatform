@@ -11,17 +11,20 @@ public class Section:IEntity
 
     public int Order { get; set; }
 
+    [MaxLength(200)]
     public string? Title { get; set; }
 
     public string? RawText { get; set; }
 
-    [ForeignKey("MediaTopic")]
-    public Guid MediaTopicId { get; set; }
+    [ForeignKey("Media")] 
+    public Guid? MediaId { get; set; }
+
+
+    
+    public virtual Media? Media { get; set; }
     
     [ForeignKey("Article")]
     public Guid ArticleId { get; set; }
-
-
-    public MediaTopic? MediaTopic { get; set; }
-    public Article? Article { get; set; }
+    
+    public virtual Article? Article { get; set; }
 }

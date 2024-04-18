@@ -8,6 +8,8 @@ public class Lesson:IEntity
 {
     [Key]
     public Guid Id { get; set; }
+
+    public string Title { get; set; } = null!;
     public bool Approved { get; set; }
     public DateTime CreatedAt { get; set; }
     public double Avg { get; set; }
@@ -20,13 +22,17 @@ public class Lesson:IEntity
     
     [ForeignKey("Creator")] 
     public Guid CreatorId { get; set; }
+    
+    
+    [ForeignKey("Media")] 
+    public Guid? MediaId { get; set; }
 
     
-    public Language? Language { get; set; }
-    public User? Creator { get; set; }
-    public Test? Test { get; set; }
-    public Article? Article { get; set; }
-    public ICollection<Review>? Reviews { get; set; }
-    public Category? Category { get; set; }
-    public ICollection<MediaLesson>? Media { get; set; }
+    public virtual Language? Language { get; set; }
+    public virtual User? Creator { get; set; }
+    public virtual Test? Test { get; set; }
+    public virtual Article? Article { get; set; }
+    public virtual ICollection<Review>? Reviews { get; set; }
+    public virtual Category? Category { get; set; }
+    public virtual Media? Media { get; set; }
 }

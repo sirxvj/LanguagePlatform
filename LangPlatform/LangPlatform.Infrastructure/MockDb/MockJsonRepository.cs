@@ -84,8 +84,8 @@ public class MockJsonRepository<T>: IRepository<T> where T:IEntity
     public async Task<int> Count(Func<T, bool> filter)
     {
         await ParseRoot();
-        var count = _file["root"]?[typeof(T).ToString()]!.Values<T>()!.Where(filter).Count();
-        return count??0;
+        var contents = _file["root"]?[typeof(T).ToString()]?.ToObject<IEnumerable<T>>()?.Where(filter);
+        return (contents ?? Enumerable.Empty<T>()).Count();
     }
 
     private async Task ParseRoot()

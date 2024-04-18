@@ -1,4 +1,5 @@
 import { Creator } from "./Creator";
+import { Media } from "./Media";
 
 export interface Lesson{
     id : string,
@@ -6,7 +7,8 @@ export interface Lesson{
     approved : boolean,
     createdAt : string,
     avg : number,
-    // MediaDto Media,
+    media:Media | undefined,// MediaDto Media,
     creator : Creator,
-    category : string
+    category : string,
+    language:string
 }

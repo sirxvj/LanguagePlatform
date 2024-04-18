@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { BsDropdownModule,BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Toast, ToastrModule, ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -23,14 +24,18 @@ import { RouterModule } from '@angular/router';
       HomeComponent, 
       RegisterComponent,
       HttpClientModule,
-      RouterModule],
+      RouterModule,
+      
+      ],
     
 })
 export class AppComponent implements OnInit{
   
-  title = 'client';
+  title = 'LangGang';
   
-  constructor(private accountService:AccountService,private router:Router){}
+  constructor(private accountService:AccountService,
+    private router:Router,
+  private toastr:ToastrService){}
   
   ngOnInit(): void {
     this.setCurrentUser()

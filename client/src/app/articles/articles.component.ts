@@ -3,6 +3,7 @@ import { ArticlesService } from '../_services/test/articles.service';
 import { Lesson } from '../_models/Lesson';
 import { CommonModule } from '@angular/common';
 import { ArticleCardComponent } from "./article-card/article-card.component";
+import { ImageService } from '../_services/image.service';
 
 @Component({
     selector: 'app-articles',
@@ -15,7 +16,8 @@ export class ArticlesComponent implements OnInit {
 
     stuff:Lesson[] = []
 
-    constructor(public articlesService:ArticlesService){}
+    constructor(public articlesService:ArticlesService
+    ){}
 
   ngOnInit(): void {
   

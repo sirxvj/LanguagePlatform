@@ -10,8 +10,10 @@ public class Review:IEntity
     [Key]
     public Guid Id { get; set; }
 
+    public DateTime CreatedAt { get; set; }
+    [MaxLength(200)]
     public string Title { get; set; } = null!;
-    
+    [MaxLength(1000)]
     public string Body { get; set; } = null!;
 
     [Range(0,5)]
