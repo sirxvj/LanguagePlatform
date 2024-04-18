@@ -4,7 +4,7 @@ namespace Domain.DTOs;
 
 public record CreateLessonDto(
     MediaDto? Media,
-    Guid CreatorId,
+    Guid? CreatorId,
     Guid? CategoryId,
     Guid? LanguageId
     );

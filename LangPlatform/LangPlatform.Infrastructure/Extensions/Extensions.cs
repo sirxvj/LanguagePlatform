@@ -1,5 +1,6 @@
 using Domain.Entities;
 using Domain.Interfaces;
+using Infrastructure.ConstrantDb;
 using Infrastructure.MockDb;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,8 +11,8 @@ public static class Extensions
     public static IServiceCollection AddMockRepository<T>(this IServiceCollection services)
         where T: IEntity
     {
-        services.AddSingleton<IRepository<T>, MockJsonRepository<T>>();
-
+        //services.AddSingleton<IRepository<T>, MockJsonRepository<T>>();
+        services.AddSingleton<IRepository<T>, ConstrantRepository<T>>();
         return services;
     }
     public static IServiceCollection AddEntityRepos(this IServiceCollection services)
@@ -30,6 +31,8 @@ public static class Extensions
             .AddMockRepository<Section>()
             .AddMockRepository<Topic>()
             .AddMockRepository<Test>();
+        
+        
         return services;
     }
     

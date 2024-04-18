@@ -5,11 +5,10 @@ namespace Application.Interfaces;
 
 public interface ILessonService
 {
-    Task<IEnumerable<LessonDto>> GetByCategory(Category category);
-    Task<IEnumerable<LessonDto>> GetByLanguage(Language language);
+    Task<IEnumerable<LessonDto>> GetFiltered(string? lang=null,string? category=null,int? approved=null,string? type=null);
 
-    Task<IEnumerable<LessonDto>> GetUnApproved();
-
+    Task AddReview(CreateReviewDto review);
+    Task<IEnumerable<ReviewDto>> GetReviews(Guid lessonId);
     Task Approve(Guid lessonId);
     
     Task DeleteLesson(Guid lessonId);

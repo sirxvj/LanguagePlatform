@@ -10,10 +10,13 @@ public class Lesson:IEntity
     public Guid Id { get; set; }
     public bool Approved { get; set; }
     public DateTime CreatedAt { get; set; }
-    public double AverageRate { get; set; }
+    public double Avg { get; set; }
     
     [ForeignKey("Language")] 
     public Guid LanguageId { get; set; }
+    
+    [ForeignKey("Category")] 
+    public Guid CategoryId { get; set; }
     
     [ForeignKey("Creator")] 
     public Guid CreatorId { get; set; }
@@ -22,8 +25,8 @@ public class Lesson:IEntity
     public Language? Language { get; set; }
     public User? Creator { get; set; }
     public Test? Test { get; set; }
-    
+    public Article? Article { get; set; }
     public ICollection<Review>? Reviews { get; set; }
-    public ICollection<Category>? Category { get; set; }
-    public ICollection<MediaLesson>? Medias { get; set; }
+    public Category? Category { get; set; }
+    public ICollection<MediaLesson>? Media { get; set; }
 }

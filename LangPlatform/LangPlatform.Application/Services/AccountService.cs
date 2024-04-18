@@ -18,7 +18,7 @@ public class AccountService:IAccountService
         _userRepository = userRepository;
     }
 
-    public async Task<TokenResponseDto> Register(RegistrationDto user)
+    public async Task<TokenResponseDto?> Register(RegistrationDto user)
     {
         if (((await _userRepository.GetAllAsync(x=>x.Username==user.Username))?? Enumerable.Empty<User>()).Count() !=0) return null;
             
@@ -34,10 +34,10 @@ public class AccountService:IAccountService
             PasswordSalt = hmac.Key
         };
         await _userRepository.CreateAsync(newUser);
-        return new TokenResponseDto(user.Username,_tokenService.CreateToken(newUser));
+        return new TokenResponseDto(newUser.Id, user.Username,_tokenService.CreateToken(newUser));
     }
 
-    public async Task<TokenResponseDto> Login(LoginDto form)
+    public async Task<TokenResponseDto?> Login(LoginDto form)
     {
         var user = await _userRepository.GetAsync(u=>u.Username==form.Username);
 
@@ -50,6 +50,6 @@ public class AccountService:IAccountService
         if(!Enumerable.SequenceEqual(loginHash,user.PasswordHash)){
             return null;
         }
-        return new TokenResponseDto(user.Username,_tokenService.CreateToken(user));
+        return new TokenResponseDto(user.Id,user.Username,_tokenService.CreateToken(user));
     }
 }

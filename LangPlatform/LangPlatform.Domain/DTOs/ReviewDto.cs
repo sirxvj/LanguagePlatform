@@ -4,5 +4,6 @@ public record ReviewDto(
     string Title,
     string Body,
     double Rate,
+    LessonDto Lesson,
    UserDto User
 );
