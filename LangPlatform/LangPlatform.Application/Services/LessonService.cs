@@ -33,7 +33,7 @@ public class LessonService:ILessonService
         _articleRepository = articlerepository;
         _commonSettings = commonSettings.Value;
     }
-    public async Task<IEnumerable<LessonDto>> GetFiltered(string? language = null,string? category=null, int? aprooved=null,
+    public async Task<IEnumerable<LessonDto>> GetFiltered(string? language = null,string? category=null, bool? aprooved=null,
         string? type=null)
     {
         var lang = await _languageRepository.GetAsync(x => x.Name == language);
@@ -43,54 +43,54 @@ public class LessonService:ILessonService
             if ((language is null || x.LanguageId == lang?.Id) &&
                 (category is null || x.CategoryId == cat?.Id))
             {
-                return (aprooved == 0 && !x.Approved) || (aprooved == 1 && x.Approved) ||
-                       (aprooved is null);
+                return (aprooved == x.Approved) || (aprooved is null);
             }
 
             return false;
         });
         List<LessonDto> result = new List<LessonDto>();
 
-        foreach (var item in lessons)
-        {
-            if (item != null)
+        if (lessons != null)
+            foreach (var item in lessons)
             {
-                item.Creator = await _userRepository.GetAsync(item.CreatorId);
-                if (type?.ToLower() == "test" && await _testRepository.Count(x => x.LessonId == item?.Id) > 0)
+                if (item != null)
                 {
-                    result.Add(item.Adapt<LessonDto>());
-                }
-                else if (type?.ToLower() == "article" &&
-                         await _articleRepository.Count(x => x.LessonId == item?.Id) > 0)
-                {
-                    result.Add(item.Adapt<LessonDto>());
-                }
-                else if (type is null)
-                {
-                    result = lessons.Adapt<List<LessonDto>>();
-                    break;
+                    item.Creator = await _userRepository.GetAsync(item.CreatorId);
+                    if (type?.ToLower() == "test" && await _testRepository.Count(x => x.LessonId == item?.Id) > 0)
+                    {
+                        result.Add(item.Adapt<LessonDto>());
+                    }
+                    else if (type?.ToLower() == "article" &&
+                             await _articleRepository.Count(x => x.LessonId == item?.Id) > 0)
+                    {
+                        result.Add(item.Adapt<LessonDto>());
+                    }
+                    else if (type is null)
+                    {
+                        result = lessons.Adapt<List<LessonDto>>();
+                        break;
+                    }
                 }
             }
-        }
 
         return result;
     }
 
 
-    public async Task<IEnumerable<ReviewDto>> GetReviews(Guid lessonId)
+    public async Task<IEnumerable<ReviewDto>> GetReviewsFull(Guid lessonId)
     {
         var reviews = await _reviewRepository.GetAllAsync(x => x.LessonId == lessonId);
-        if (reviews != null)
-            foreach (var review in reviews)
-            {
-                if (review != null)
-                {
-                    review.Lesson = await _repository.GetAsync(review.LessonId);
-                    review.User = await _userRepository.GetAsync(review.UserId);
-                }
-            }
+        // if (reviews != null)
+        //     foreach (var review in reviews)
+        //     {
+        //         if (review != null)
+        //         {
+        //             review.Lesson = await _repository.GetAsync(review.LessonId);
+        //             review.User = await _userRepository.GetAsync(review.UserId);
+        //         }
+        //     }
 
-        return reviews.Adapt<IEnumerable<ReviewDto>>();
+        return reviews.Adapt<IEnumerable<ReviewDto>>().OrderByDescending(r=>r.CreatedAt);
     }
 
     public async Task Approve(Guid lessonId)
@@ -111,7 +111,7 @@ public class LessonService:ILessonService
     {
 
         var newReview = review.Adapt<Review>();
-        
+        newReview.CreatedAt=DateTime.Now.ToUniversalTime();
         int reviewAmount = await _reviewRepository.Count(x => x.LessonId == review.LessonId);
         if (reviewAmount < 20 || reviewAmount % 10 != 0)
         {
@@ -123,7 +123,7 @@ public class LessonService:ILessonService
         await _reviewRepository.CreateAsync(newReview);
     }
 
-    public async Task<IEnumerable<ReviewDto>> ReviewListing(Guid lessonId)
+    public async Task<IEnumerable<ReviewDto>> GetReviews(Guid lessonId)
     {
         var reviews = await _reviewRepository.GetAllAsync(x => x.LessonId == lessonId);
         return reviews.Adapt<IEnumerable<ReviewDto>>();

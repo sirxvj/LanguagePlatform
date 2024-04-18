@@ -9,5 +9,5 @@ public class Category:IEntity
     public Guid Id { get; set; }
 
     public string Name { get; set; } = null!;
-    public ICollection<Lesson>? Lessons { get; set; }
+    public virtual ICollection<Lesson>? Lessons { get; set; }
 }

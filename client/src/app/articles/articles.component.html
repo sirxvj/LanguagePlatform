@@ -1,4 +1,6 @@
 <div>
-    <p *ngFor="let lesson of stuff">{{lesson.title}}</p>
+    <app-article-card *ngFor="let lesson of stuff" [lesson]="lesson"></app-article-card>
+    <div *ngIf="stuff.length===0">
+        <h1 class="no-content">No Content</h1>
+    </div>
 </div>
-<app-article-card></app-article-card>

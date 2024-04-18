@@ -1,0 +1,69 @@
+<div style="background-color:whitesmoke; padding: 50px;">
+
+<div style="margin: 0px 150px;">
+    
+    <div class="bg-white" style="padding: 40px;" >
+        <div class="header" style="text-align: center;">
+            <h1>{{article?.lesson?.title}}</h1>
+        </div>
+        <div class="d-flex justify-content-between">
+           <div class="d-flex">
+            <svg style="padding-top: 7px;"  height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 128a128 128 0 1 0 256 0A128 128 0 1 0 96 128zm94.5 200.2l18.6 31L175.8 483.1l-36-146.9c-2-8.1-9.8-13.4-17.9-11.3C51.9 342.4 0 405.8 0 481.3c0 17 13.8 30.7 30.7 30.7H162.5c0 0 0 0 .1 0H168 280h5.5c0 0 0 0 .1 0H417.3c17 0 30.7-13.8 30.7-30.7c0-75.5-51.9-138.9-121.9-156.4c-8.1-2-15.9 3.3-17.9 11.3l-36 146.9L238.9 359.2l18.6-31c6.4-10.7-1.3-24.2-13.7-24.2H224 204.3c-12.4 0-20.1 13.6-13.7 24.2z"/></svg>
+            <p >{{article?.lesson?.creator?.username}}</p>
+        </div>  
+        <div class="pre-star">
+            <p >{{article?.lesson?.avg?.toPrecision(2)}}/5</p>
+        </div>
+        </div>
+
+        <p>{{article?.lesson?.category}}</p>
+        <div *ngFor="let section of article?.sections" style="padding-top: 20px;">
+            <h2>{{section.title}}</h2>
+            <p>{{section.rawText}}</p>
+        </div>
+       
+    </div>
+    <div class="comments bg-white mt-3" style="padding: 20px 40px;">
+        <h6>Your comment</h6>
+        <form #form="ngForm" (ngSubmit)="postReview()">
+            <div class="form-group star-rating d-flex justify-content-end">
+               
+                    <input  [(ngModel)]="newReview.rate" name="star" class="form-control" type="radio" id="star5" name="rating" [value]="5" />
+                    <label for="star5"></label>
+                    <input  [(ngModel)]="newReview.rate" name="star" class="form-control" type="radio" id="star4" name="rating" [value]="4" />
+                    <label for="star4"></label>
+                    <input  [(ngModel)]="newReview.rate" name="star" class="form-control" type="radio" id="star3" name="rating" [value]="3" />
+                    <label for="star3"></label>
+                    <input  [(ngModel)]="newReview.rate" name="star" class="form-control" type="radio" id="star2" name="rating" [value]="2" />
+                    <label for="star2"></label>
+                    <input  [(ngModel)]="newReview.rate" name="star" class="form-control" type="radio" id="star1" name="rating" [value]="1" />
+                    <label for="star1"></label>
+                  
+            </div>
+                <div class="form-group mt-3">
+                  
+                  <input name="titleInput" type="Text" [(ngModel)]="newReview.title" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+                </div>
+                <div class="form-group mt-2">
+                  <textarea name="bodyInput" [(ngModel)]="newReview.body" placeholder="Share your thoughts" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+    
+            <button class="btn btn-success mt-2" type="submit" [disabled]="!form.form.valid">
+                Post comment
+            </button>
+            
+            
+        </form>
+       
+    </div>
+    <div class="comments bg-white mt-3" style="padding: 20px 40px;">
+    <h6 *ngIf="reviews?.length as size">
+            
+        Comments {{size}}</h6>
+        <hr>
+    <div *ngFor="let comment of reviews">
+        <app-comment [review]="comment"></app-comment>
+    </div>
+    </div>
+</div>
+</div>

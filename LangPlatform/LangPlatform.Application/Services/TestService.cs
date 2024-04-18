@@ -26,35 +26,34 @@ public class TestService:ITestService
     public async Task AddTest(CreateTestDto test)
     {
         Test newTest = test.Adapt<Test>();
-        newTest.Lesson = null;
-        Lesson newLesson = test.Lesson.Adapt<Lesson>();
-        newLesson.CreatedAt = DateTime.Now;
+        
+        //Lesson newLesson = test.Lesson.Adapt<Lesson>();
+        if (newTest.Lesson != null) newTest.Lesson.CreatedAt = DateTime.Now;
 
         User? creator = await _userRepository.GetAsync(test.Lesson.CreatorId??Guid.Empty);
-        newLesson.Approved = creator?.Role == RoleType.Admin;
+        if (newTest.Lesson != null) newTest.Lesson.Approved = creator?.Role == RoleType.Admin;
 
         if (creator != null) await _userRepository.UpdateAsync(creator);
 
-        newLesson.Test = newTest;
+        //newLesson.Test = newTest;
         
-        newTest.LessonId = await _lessonRepository.CreateAsync(newLesson);
         
-        Guid testId =  await _testRepository.CreateAsync(newTest);
+       await _testRepository.CreateAsync(newTest);
         
-        IEnumerable<QuestionItem> questions = test.Questions.Adapt<IEnumerable<QuestionItem>>();
-        foreach (var question in questions)
-        {
-            question.TestId = testId;
-            IEnumerable<AnswerItem> answer = question.Answers.Adapt<IEnumerable<AnswerItem>>();
-            question.Answers = null;
-            var qid = await _questionRepository.CreateAsync(question);
-            foreach (var ans in answer)
-            {
-                ans.QuestionItemId = qid;
-                await _answerRepository.CreateAsync(ans);
-            }
-            
-        }
+        // IEnumerable<QuestionItem> questions = test.Questions.Adapt<IEnumerable<QuestionItem>>();
+        // foreach (var question in questions)
+        // {
+        //     question.TestId = testId;
+        //     IEnumerable<AnswerItem> answer = question.Answers.Adapt<IEnumerable<AnswerItem>>();
+        //     question.Answers = null;
+        //     var qid = await _questionRepository.CreateAsync(question);
+        //     foreach (var ans in answer)
+        //     {
+        //         ans.QuestionItemId = qid;
+        //         await _answerRepository.CreateAsync(ans);
+        //     }
+        //     
+        // }
         
        
     }
@@ -63,12 +62,12 @@ public class TestService:ITestService
         var testObj = await _testRepository.GetAsync(x => x.LessonId == lessonId);
         if (testObj is null)
             return null;
-        testObj.Lesson = await _lessonRepository.GetAsync(lessonId);
-        testObj.QuestionItems = (await _questionRepository.GetAllAsync(x => x.TestId == testObj.Id))!.ToList();
-        foreach (var question in testObj.QuestionItems)
-        {
-            question!.Answers = ((await _answerRepository.GetAllAsync(x => x.QuestionItemId == question.Id))!).ToList()!;
-        }
+        // testObj.Lesson = await _lessonRepository.GetAsync(lessonId);
+        // testObj.QuestionItems = (await _questionRepository.GetAllAsync(x => x.TestId == testObj.Id))!.ToList();
+        // foreach (var question in testObj.QuestionItems)
+        // {
+        //     question!.Answers = ((await _answerRepository.GetAllAsync(x => x.QuestionItemId == question.Id))!).ToList()!;
+        // }
         TestObjectDto testRes = testObj.Adapt<TestObjectDto>();
 
         return testRes;

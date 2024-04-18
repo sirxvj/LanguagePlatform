@@ -1,5 +1,5 @@
 export interface Creator{
     id : string,
     username : string,
-    email : string
+    email : string | undefined
 }

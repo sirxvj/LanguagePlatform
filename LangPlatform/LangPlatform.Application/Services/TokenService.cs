@@ -12,14 +12,15 @@ namespace Application.Services
     {   
         private readonly SymmetricSecurityKey _key;
         public TokenService(IConfiguration config){
-            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:TokenKey"]));
+            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:TokenKey"] ?? throw new InvalidOperationException()));
         }
         public string CreateToken(User user)
         {
             
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.NameId,user.Username)
+                new(JwtRegisteredClaimNames.NameId,user.Username),
+                new(ClaimTypes.Role,user.Role.ToString())
             };
 
             var creds = new SigningCredentials(_key,SecurityAlgorithms.HmacSha256Signature);

@@ -2,10 +2,12 @@ namespace Domain.DTOs;
 
 public record LessonDto(
     Guid Id,
+    string Title,
     bool Approved,
     DateTime CreatedAt,
     double Avg,
-    // MediaDto Media,
+    MediaDto Media,
     CreatorDto Creator,
-    string Category
+    string Category,
+    string Language
     );
