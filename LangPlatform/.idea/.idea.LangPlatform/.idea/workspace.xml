@@ -9,69 +9,157 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7172421-5aed-42ab-bf0f-2e0eae57ca95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/Data/DataContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/Data/EfRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/CategoriesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/LessonsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LangPlatform/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LangPlatform/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LangPlatform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LangPlatform/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Extensions/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Extensions/Extensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Interfaces/ICategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Interfaces/ICategoryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Interfaces/ILanguageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Interfaces/ILanguageService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Interfaces/ILessonService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Interfaces/ILessonService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Middleware/ExceptionMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Middleware/ExceptionMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Services/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Services/AccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/LangPlatform.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/LangPlatform.Application.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Services/ArticleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Services/ArticleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Services/CategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Services/CategoryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Services/LanguageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Services/LanguageService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Services/LessonService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Services/LessonService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Services/TestService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Services/TestService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/Services/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/Services/TokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/ArticleDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/ArticleDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/CreateArticleDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/CreateArticleDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/CreateLessonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/CreateLessonDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/CreateTestDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/CreateTestDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/LessonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/LessonDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Application.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Application.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/bin/Debug/net8.0/LangPlatform.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/LangPlatform.Application.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/ref/LangPlatform.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/ref/LangPlatform.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/refint/LangPlatform.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/Debug/net8.0/refint/LangPlatform.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/LangPlatform.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/LangPlatform.Application.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Application/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/MediaDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/MediaDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/ReviewDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/ReviewDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/TestObjectDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/TestObjectDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/AnswerItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/AnswerItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Article.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Language.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Language.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Lesson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Lesson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/MediaLesson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Media.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/MediaQuestion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/MediaTopic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/QuestionItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/QuestionItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Review.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Review.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Section.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Section.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Errors/ApiException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Errors/ApiException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/SectionDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/DTOs/SectionDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Media.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Entities/Media.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/Interfaces/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/Interfaces/IRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/LangPlatform.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/LangPlatform.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/bin/Debug/net8.0/LangPlatform.Domain.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/bin/Debug/net8.0/LangPlatform.Domain.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/bin/Debug/net8.0/LangPlatform.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/bin/Debug/net8.0/LangPlatform.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/bin/Debug/net8.0/LangPlatform.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/bin/Debug/net8.0/LangPlatform.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/LangPlatform.Domain.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/ref/LangPlatform.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/ref/LangPlatform.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/refint/LangPlatform.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/Debug/net8.0/refint/LangPlatform.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/LangPlatform.Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/LangPlatform.Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Domain/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/Extensions/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/Extensions/Extensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/LangPlatform.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/LangPlatform.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/MockDb/MockJsonRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/MockDb/MockJsonRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Infrastructure.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Infrastructure.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/bin/Debug/net8.0/LangPlatform.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/LangPlatform.Infrastructure.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/ref/LangPlatform.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/ref/LangPlatform.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/refint/LangPlatform.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/Debug/net8.0/refint/LangPlatform.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/LangPlatform.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/LangPlatform.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/ConfigureServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/AccountController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/ArticlesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/ArticlesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/TestsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/TestsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/LangPlatform.WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/LangPlatform.WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/MockManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/MockManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/_models/Creator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/_models/Creator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.WebApi" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.WebApi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.WebApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.WebApi.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/LangPlatform.WebApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/bin/Debug/net8.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/LangPlatform.WebApi.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/apphost" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/apphost" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/ref/LangPlatform.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/ref/LangPlatform.WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/refint/LangPlatform.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/Debug/net8.0/refint/LangPlatform.WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/LangPlatform.WebApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/LangPlatform.WebApi.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.WebApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.WebApi/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangPlatform.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/LangPlatform.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/_models/Media.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/_models/Media.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/_models/Section.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/_models/Section.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/_services/image.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/_services/image.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/_services/test/articles.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/_services/test/articles.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/_services/test/lessons.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/_services/test/lessons.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/articles/article-card/article-card.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/article-card/article-card.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/articles/article-card/article-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/article-card/article-card.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/articles/article-card/article-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/article-card/article-card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/articles/article-details/article-details.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/article-details/article-details.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/articles/article-details/article-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/article-details/article-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/articles/article-details/article-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/article-details/article-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/articles/article-details/comment/comment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/article-details/comment/comment.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/articles/articles.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/articles.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/articles/articles.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/articles.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/articles/articles.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/articles/articles.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/login/login.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/login/login.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/login/login.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/register/register.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/register/register.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/register/register.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/study-test/study-test.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/study-test/study-test.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/teach/create-article/create-article.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/teach/create-article/create-article.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/teach/create-article/create-article.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/teach/create-article/create-article.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/teach/create-article/create-article.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/teach/create-article/create-article.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/teach/teach.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/teach/teach.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/teach/teach.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/teach/teach.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/app/teach/teach.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/teach/teach.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/environments/environment.development.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/environments/environment.development.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,12 +173,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e7a6810948ee49f59b70840068d1ef11b2c600/de/c2521e1c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e7a6810948ee49f59b70840068d1ef11b2c600/fe/978e13be/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9dc6be6cbcf9320c4f9b298cacf6dcf5217dfe63ed414c1a9635b1b7bb3a9ac/ConstructorHandling.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/93e568f90c7c4cc1b58283282057b37ab2c600/c0/b3d096ad/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LangPlatform.Domain/DTOs/CreateQuestionDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LangPlatform.Domain/DTOs/QuestionItemDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LangPlatform.Domain/DTOs/TestObjectDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LangPlatform.Domain/Errors/ApiException.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -101,32 +189,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.LangPlatform: http.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/sicrx/asp/asp-levelup/ConsoleQueries/ConsoleQueries.csproj",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.LangPlatform: http.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sicrx/course-work/OOP_COURSE_WORK/LangPlatform/LangPlatform.Domain/LangPlatform.Domain.csproj&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "rider.external.source.directories": [
-      "/home/sicrx/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/home/sicrx/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/home/sicrx/.local/share/Symbols/src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/sicrx/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/home/sicrx/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/home/sicrx/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.LangPlatform: http">
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
@@ -274,6 +362,20 @@
       <workItem from="1713252904370" duration="20360000" />
       <workItem from="1713297621114" duration="644000" />
       <workItem from="1713355332137" duration="18413000" />
+      <workItem from="1713435164388" duration="1419000" />
+      <workItem from="1713449389969" duration="3917000" />
+      <workItem from="1713524522904" duration="2253000" />
+      <workItem from="1713621536560" duration="11180000" />
+      <workItem from="1713638396983" duration="4888000" />
+      <workItem from="1713645349664" duration="19219000" />
+      <workItem from="1713715704843" duration="791000" />
+      <workItem from="1713720832031" duration="1150000" />
+      <workItem from="1713792458146" duration="957000" />
+      <workItem from="1713810591496" duration="1785000" />
+      <workItem from="1713868944386" duration="5806000" />
+      <workItem from="1713956847802" duration="387000" />
+      <workItem from="1713959526789" duration="1213000" />
+      <workItem from="1713964417255" duration="4578000" />
     </task>
     <task id="LOCAL-00001" summary="Application skeleton(no framework cli client)">
       <option name="closed" value="true" />
@@ -301,48 +403,49 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/LangPlatform.Application/Services/LessonService.cs</url>
-          <line>69</line>
+          <line>71</line>
           <properties documentPath="$PROJECT_DIR$/LangPlatform.Application/Services/LessonService.cs" containingFunctionPresentation="Method 'GetFiltered'">
             <startOffsets>
-              <option value="2924" />
+              <option value="3002" />
             </startOffsets>
             <endOffsets>
-              <option value="2966" />
+              <option value="3044" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/LangPlatform.Application/Services/ArticleService.cs</url>
-          <line>28</line>
-          <properties documentPath="$PROJECT_DIR$/LangPlatform.Application/Services/ArticleService.cs" containingFunctionPresentation="Method 'UploadArticle'">
+          <line>82</line>
+          <properties documentPath="$PROJECT_DIR$/LangPlatform.Application/Services/ArticleService.cs" containingFunctionPresentation="Method 'DownloadArticle'">
             <startOffsets>
-              <option value="1167" />
+              <option value="3528" />
             </startOffsets>
             <endOffsets>
-              <option value="1213" />
+              <option value="3563" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/LangPlatform.WebApi/Controllers/ArticlesController.cs</url>
-          <line>42</line>
-          <properties documentPath="$PROJECT_DIR$/LangPlatform.WebApi/Controllers/ArticlesController.cs" containingFunctionPresentation="Method 'PostArticle'">
+          <url>file://$PROJECT_DIR$/LangPlatform.Application/Services/ArticleService.cs</url>
+          <line>56</line>
+          <properties documentPath="$PROJECT_DIR$/LangPlatform.Application/Services/ArticleService.cs" containingFunctionPresentation="Method 'UploadArticle'">
             <startOffsets>
-              <option value="1284" />
+              <option value="2587" />
             </startOffsets>
             <endOffsets>
-              <option value="1308" />
+              <option value="2619" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Domain.Entities.Article" memberName="Sections" />
+        <PinnedItemInfo parentTag="Type#Castle.Proxies.SectionProxy" memberName="Media" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

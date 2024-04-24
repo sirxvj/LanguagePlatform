@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/LangPlatform.WebApi.props" />
+</Project>

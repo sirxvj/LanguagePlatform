@@ -7,10 +7,16 @@ import { Media } from '../_models/Media';
 export class ImageService {
 
   constructor() { }
-  getImage(media:Media|undefined){
-    if(media && media.Bytes)
-      return URL.createObjectURL(new Blob([Uint8Array.from(media.Bytes).buffer ],{type:'image/'+media.FileType}))
-    else
+  async getImage(media:Media|undefined) {
+    if(media && media.bytes){
+      
+      const arr = new Uint8Array(atob(media.bytes).split("").map(function(c) {
+        return c.charCodeAt(0); }))
+       
+      return URL.createObjectURL(new Blob([arr.buffer ],{type:'image/'+media.FileType})) 
+    
+    }
+      else
       return ''
   }
 }

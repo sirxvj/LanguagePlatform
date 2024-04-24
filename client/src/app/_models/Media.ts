@@ -1,5 +1,5 @@
 export interface Media{
-    Bytes : number[] | undefined,
+    bytes : string | undefined,
     FileType : string,
     FileName : string
 }

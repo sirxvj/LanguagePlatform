@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "rkrDXpuYluhaXrm4Gcs+hb5Zsu5TZscWgZfqnxhFuLY6ctskKui7YwL2E9nPo5Vk2oLtBtRoLfOTxUvLwcvpQg==",
+  "dgSpecHash": "Bwrfbsm9ACzl1F1fvm2qwzOBYEsun9LksoWzfmbZgad7MNqRfdp5WqYe4+Hm+saJ0qErGYqPYu/+3OFIPLzWlw==",
   "success": true,
   "projectFilePath": "/home/sicrx/course-work/OOP_COURSE_WORK/LangPlatform/LangPlatform.Domain/LangPlatform.Domain.csproj",
   "expectedPackageFiles": [
+    "/home/sicrx/.nuget/packages/fluentvalidation/11.9.1/fluentvalidation.11.9.1.nupkg.sha512",
     "/home/sicrx/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/home/sicrx/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/home/sicrx/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/home/sicrx/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/home/sicrx/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "/home/sicrx/.nuget/packages/microsoft.codeanalysis.common/4.5.0/microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

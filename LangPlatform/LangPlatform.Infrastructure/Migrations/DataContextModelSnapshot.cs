@@ -151,8 +151,8 @@ namespace Infrastructure.Migrations
                         .HasColumnType("bytea");
 
                     b.Property<string>("FileName")
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
+                        .HasMaxLength(120)
+                        .HasColumnType("character varying(120)");
 
                     b.Property<string>("FileType")
                         .HasMaxLength(10)

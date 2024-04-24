@@ -1,9 +1,11 @@
+using System.ComponentModel.DataAnnotations;
 using Application.Interfaces;
 using Domain.DTOs;
 using Domain.Entities;
 using Domain.Interfaces;
 using Domain.Settings;
 using Mapster;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 
 namespace Application.Services;
@@ -80,16 +82,7 @@ public class LessonService:ILessonService
     public async Task<IEnumerable<ReviewDto>> GetReviewsFull(Guid lessonId)
     {
         var reviews = await _reviewRepository.GetAllAsync(x => x.LessonId == lessonId);
-        // if (reviews != null)
-        //     foreach (var review in reviews)
-        //     {
-        //         if (review != null)
-        //         {
-        //             review.Lesson = await _repository.GetAsync(review.LessonId);
-        //             review.User = await _userRepository.GetAsync(review.UserId);
-        //         }
-        //     }
-
+       
         return reviews.Adapt<IEnumerable<ReviewDto>>().OrderByDescending(r=>r.CreatedAt);
     }
 
@@ -111,6 +104,10 @@ public class LessonService:ILessonService
     {
 
         var newReview = review.Adapt<Review>();
+        if (await _reviewRepository.Count(r => r.UserId == review.UserId && r.LessonId == review.LessonId) > 0)
+        {
+            throw new ValidationException("One user, one comment",null,StatusCodes.Status400BadRequest);
+        }
         newReview.CreatedAt=DateTime.Now.ToUniversalTime();
         int reviewAmount = await _reviewRepository.Count(x => x.LessonId == review.LessonId);
         if (reviewAmount < 20 || reviewAmount % 10 != 0)

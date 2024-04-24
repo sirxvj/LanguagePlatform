@@ -1,5 +1,6 @@
 using Application.Middleware;
 using LangPlatform;
+using LangPlatform.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    //app.ApplyMigrations();
+}
+else{
+    app.ApplyMigrations();
 }
 
 

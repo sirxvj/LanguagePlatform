@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from "../navbar/navbar.component";
-import { RegisterComponent } from "../register/register.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule }   from '@angular/forms';
-import { LoginComponent } from "../login/login.component";
+
 import { AccountService } from '../_services/account.service';
 import { Router } from '@angular/router';
 import { User } from '../_models/User';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @Component({

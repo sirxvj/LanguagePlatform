@@ -14,8 +14,10 @@ export class StudyTestComponent implements OnInit {
   cringe: Cringe = {
     title: new ArrayBuffer(3)
   }
-  constructor(private testService:TestsService){}
-
+  constructor(private testService:TestsService){
+    
+  } 
+ 
 
   ngOnInit(): void {
     this.testService.postCringe(this.cringe).subscribe(

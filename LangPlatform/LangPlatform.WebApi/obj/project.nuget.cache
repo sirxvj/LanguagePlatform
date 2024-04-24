@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "fP2h3fBA0Wkicfmauf9ATmLf16U6d7zTKMgczmG70MZ1+r8qGB18rOIGMcQR/GJi5Cv96X2EmG9pZOIcTL6pVQ==",
+  "dgSpecHash": "w6vv1mmoVEw4ax60Z+fclwZ8cBJ4OBZVFTd6/SE1DuZRItZxdNcPF8ja1IUJwI82wKnUWLLPkfTCTGSOjqmnvQ==",
   "success": true,
   "projectFilePath": "/home/sicrx/course-work/OOP_COURSE_WORK/LangPlatform/LangPlatform.WebApi/LangPlatform.WebApi.csproj",
   "expectedPackageFiles": [
     "/home/sicrx/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
+    "/home/sicrx/.nuget/packages/fluentvalidation/11.9.1/fluentvalidation.11.9.1.nupkg.sha512",
     "/home/sicrx/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/sicrx/.nuget/packages/mapster/7.4.1-pre01/mapster.7.4.1-pre01.nupkg.sha512",
     "/home/sicrx/.nuget/packages/mapster.core/1.2.2-pre01/mapster.core.1.2.2-pre01.nupkg.sha512",
+    "/home/sicrx/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/home/sicrx/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/home/sicrx/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.3/microsoft.aspnetcore.authentication.jwtbearer.8.0.3.nupkg.sha512",
     "/home/sicrx/.nuget/packages/microsoft.aspnetcore.openapi/8.0.2/microsoft.aspnetcore.openapi.8.0.2.nupkg.sha512",
     "/home/sicrx/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

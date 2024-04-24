@@ -15,11 +15,14 @@ export class ArticlesService {
   getAllRaw(){
     return this.http.get(this.baseUrl+'articles')
   }
-
+  getAllUnaprooved(){
+    return this.http.get(this.baseUrl+'articles/unaprooved')
+  }
   getDetailed(id:string){
     return this.http.get(this.baseUrl+'articles/'+id)
   }
   postArticle(article:CreateArticle){
+    console.log(article)
     return this.http.post(this.baseUrl+'articles',article)
   }
 }

@@ -4,5 +4,5 @@ export interface Section{
     order : number,
     title : string,
     rawText : string,
-    mediaTopic : Media | undefined
+    media : Media | undefined
 }

@@ -30,8 +30,6 @@ public static class Extensions
             .Map(dest => dest.Language, src => src.Language != null ? src.Language.Name : " ")
             .Map(dest => dest.Category, src => src.Category != null ? src.Category.Name : " ");
         
-        
-        
         var categoryService = services.BuildServiceProvider().GetService<ICategoryService>();
         var langService = services.BuildServiceProvider().GetService<ILanguageService>();
         TypeAdapterConfig<CreateLessonDto, Lesson>
@@ -39,7 +37,13 @@ public static class Extensions
             .Map(dest => dest.LanguageId, src => langService!.GetExact(src.LanguageId ?? string.Empty).Result!.Id)
             .Map(dest => dest.CategoryId, src => categoryService!.GetExact(src.CategoryId ?? string.Empty).Result!.Id);
 
+        TypeAdapterConfig<MediaDto, Media>
+            .NewConfig()
+            .Map(dest => dest.Bytes, src => Convert.FromBase64String(src.Bytes));
 
+        TypeAdapterConfig<Media, MediaDto>
+            .NewConfig()
+            .Map(dest => dest.Bytes, src => Convert.ToBase64String(src.Bytes ?? Array.Empty<byte>()));
     }
 }
 
