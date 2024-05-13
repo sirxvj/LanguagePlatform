@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.mainpg{
+    background-color: #e0e0e0;
+    padding: 50px 20%;
+    min-height: 94vh;
+}

@@ -1,4 +1,13 @@
 <app-navbar></app-navbar>
+<ngx-spinner
+ bdColor="rgba(0,0,0,0.8)"
+ size="medium"
+ color="#fff"
+    [fullScreen]="true"
+  >
+    <h3 style="color: #fff;">Loading</h3>
+</ngx-spinner>
 
-
+<div style="margin-top: 6vh;">
 <router-outlet />
+</div>

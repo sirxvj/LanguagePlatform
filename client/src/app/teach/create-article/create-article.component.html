@@ -1,13 +1,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="mainel" >
+<div class="mainpg" >
     <div  class="lesson-picker">
         <h1 class="global-title">Write your own article</h1>
         <input  [(ngModel)]="lesson.title" class="title-input" type="text" name="" id="" placeholder="Title">
-        <select class="form-select" aria-label="Language" [(ngModel)]="lesson.languageId">
+        
+        <select id="langLabeled" class="form-select" aria-label="Language" aria-selected="" [(ngModel)]="lesson.languageId">
             <option *ngFor="let lang of langs" value="{{lang}}">{{lang}}</option>
         </select>
-        
+    
         <select class="form-select" aria-label="Difficulty" [(ngModel)]="lesson.categoryId">
             <option *ngFor="let cat of categories" value="{{cat}}">{{cat}}</option>
         </select>
@@ -38,5 +39,7 @@
         <img src="../../../assets/icons8-plus-24.png" alt="">
         <h1 style="font-size: 30px; padding-left: 33px;">Add section</h1>
     </div>
-    <button  class="btn btn-success" (click)="postArticle()">Send</button>
+    <div class="lesson-picker">
+        <button  class="btn btn-outline-success" (click)="postArticle()">Send</button>
+    </div>
 </div>

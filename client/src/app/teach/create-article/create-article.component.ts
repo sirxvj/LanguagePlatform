@@ -15,6 +15,7 @@ import { CreateArticle } from '../../_models/CreateArticle';
 import { CreateLesson } from '../../_models/CreateLesson';
 import { AccountService } from '../../_services/account.service';
 import { take } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-create-article',
@@ -32,7 +33,7 @@ export class CreateArticleComponent implements OnInit {
     order: 0,
     title: '',
     rawText: '',
-    mediaTopic: undefined
+    media: undefined
   }]
   lesson:CreateLesson = {
     title: '',
@@ -44,7 +45,8 @@ export class CreateArticleComponent implements OnInit {
   constructor(private categoryService:CategorizeService,
     private articleService:ArticlesService,
     public imageService:ImageService,
-    private accountService:AccountService
+    private accountService:AccountService,
+    private toastr:ToastrService
   ){}
   
   ngOnInit(): void {
@@ -66,34 +68,36 @@ export class CreateArticleComponent implements OnInit {
   }
   addSection(){
     this.sections.push({
-      order: 0,
+      order: this.sections.length-1,
       title: '',
       rawText: '',
-      mediaTopic: undefined
+      media: undefined
     })
   }
   deleteSection(index:number){
     this.sections.splice(index,1)
+    this.sections.map(
+      sec=>{
+        sec.order = this.sections.indexOf(sec)
+      }
+    )
   }
   uploadFile(event : any,target:any){
-    console.log("asddas")
       const file:File = event.target.files[0]
       let media:Media = {   
-        Bytes: undefined,
+        bytes: undefined,
         FileType: '',
         FileName: ''
       }
       if(file){
-        // file.arrayBuffer().then(res=>{
-        //   media.Bytes = res
-        // })
-         file.stream().getReader().read().then(RES=>{
-          media.Bytes = Array.from(RES.value??new Uint8Array)
-         })
+        file.arrayBuffer().then(res=>{
+          media.bytes = this.arrayBufferToBase64String(res)
+        })
+        
         media.FileName = file.name
         media.FileType = file.type
       }
-      this.lesson.media = media
+      target.media = media
   }
   postArticle(){
     const article:CreateArticle = {
@@ -103,9 +107,29 @@ export class CreateArticleComponent implements OnInit {
     console.log(article)
     this.articleService.postArticle(article).subscribe(
       resp=>{
-        console.log(resp)
+        this.toastr.success('Article created succesfully','OK')
+        this.lesson = {
+          title: '',
+          media: undefined,
+          creatorId: '',
+          categoryId: '',
+          languageId: ''
+        }
+        this.sections = []
+      },
+      err=>{
+        this.toastr.error('Error','Something went wrong')
       }
     )
     
+  }
+  private arrayBufferToBase64String(buffer: ArrayBuffer) {
+    let binaryString = ''
+    var bytes = new Uint8Array(buffer);
+    for (var i = 0; i < bytes.byteLength; i++) {
+      binaryString += String.fromCharCode(bytes[i]);
+    }
+  
+    return window.btoa(binaryString);
   }
 }

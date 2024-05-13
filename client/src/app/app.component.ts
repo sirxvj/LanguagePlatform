@@ -1,7 +1,6 @@
 import { Component, OnInit, importProvidersFrom } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
-import { RegisterComponent } from './register/register.component';
 import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { AccountService } from './_services/account.service';
 import { User } from './_models/User';
@@ -10,6 +9,8 @@ import { BsDropdownModule,BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Toast, ToastrModule, ToastrService } from 'ngx-toastr';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { RegisterComponent } from './home/register/register.component';
 
 
 @Component({
@@ -25,7 +26,7 @@ import { Toast, ToastrModule, ToastrService } from 'ngx-toastr';
       RegisterComponent,
       HttpClientModule,
       RouterModule,
-      
+      NgxSpinnerModule
       ],
     
 })

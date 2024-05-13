@@ -1,0 +1,40 @@
+services:
+  api:
+    build:
+      context: LangPlatform/
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 5105:8080
+    networks:
+      - application_network
+
+  db:
+    image: postgres:latest
+    container_name: db
+    environment:
+      - POSTGRES_DB=langgang
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - db-data:/var/lib/postgres
+    networks:
+      - application_network 
+    ports:
+      - 5433:5432
+
+  client:
+    build: client
+    depends_on:
+      - api
+    ports:
+      - 4200:4200
+    networks:
+      - application_network
+
+volumes:
+  db-data:
+
+networks:
+  application_network:

@@ -24,6 +24,10 @@ public static class ConfigureServices
         services.AddControllers();
         services.AddApplicationServices();
         services.AddSwaggerGen();
+        services.AddDbContext<DataContext>(opt =>
+        {
+            opt.UseLazyLoadingProxies().UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+        });
         services.AddEntityRepos();
         services.Configure<CommonSettings>(builder?.Configuration.GetSection("CommonSettings") ?? throw new InvalidOperationException());
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -39,7 +43,6 @@ public static class ConfigureServices
                 };
             });
         services.MapsterConfig();
-        // services.AddSingleton<IRepository<Language>, MockJsonRepository<Language>>();
         return services;
     }
 }

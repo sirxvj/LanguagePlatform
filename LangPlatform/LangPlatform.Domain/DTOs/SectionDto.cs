@@ -4,5 +4,5 @@ public record SectionDto(
     int Order,
     string? Title,
     string? RawText,
-    MediaDto? MediaTopic
+    MediaDto? Media
     );

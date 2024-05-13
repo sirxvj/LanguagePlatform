@@ -10,6 +10,8 @@ import { CommentComponent } from "./comment/comment.component";
 import { AccountService } from '../../_services/account.service';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { Media } from '../../_models/Media';
+import { ImageService } from '../../_services/image.service';
+import { Section } from '../../_models/Section';
 
 @Component({
     selector: 'app-article-details',
@@ -26,10 +28,15 @@ export class ArticleDetailsComponent implements OnInit{
 
   newReview : any = {}
 
+  imgUrls : string[] = []
+
+  prefabs = true
+
   constructor(private articlesService:ArticlesService,
     private lessonService:LessonsService,
     private router: ActivatedRoute,
     private accountService:AccountService,
+    public imageService:ImageService,
     private toastr : ToastrService){}
   
   ngOnInit(): void {
@@ -39,6 +46,10 @@ export class ArticleDetailsComponent implements OnInit{
   getDeatailed(id:string){
     this.articlesService.getDetailed(id).subscribe(resp=>{
       this.article=resp as Article
+       this.article.sections.forEach(sec=>{
+        this.loadImg(sec,this.article?.sections.indexOf(sec)??0)
+       })
+       this.prefabs = false
     })
     this.lessonService.getReviews(id).subscribe(resp=>{
       this.reviews = resp as Review[]
@@ -51,7 +62,18 @@ export class ArticleDetailsComponent implements OnInit{
       this.toastr.success('Comment added')
       this.newReview = {}
       this.getDeatailed(this.router.snapshot.paramMap.get('id')??"")
+    },
+    err=>{
+      console.log(err)
+      this.toastr.error(err.error.message,'Error')
     })
   }
-  
+  loadImg(target:Section,index:number){
+   
+    this.imageService.getImage(target.media).then(x=> {
+      
+      this.imgUrls[index]=x
+    }
+    )
+  }
 }

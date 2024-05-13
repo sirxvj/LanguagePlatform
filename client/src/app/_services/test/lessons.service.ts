@@ -10,6 +10,10 @@ export class LessonsService {
 
   constructor(private http:HttpClient) { }
 
+  getAllUnaprooved(){
+    
+  }
+
   getReviews(id:string){
     return this.http.get(this.baseUrl+'lessons/'+id+'/reviews')
   }

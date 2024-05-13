@@ -1,7 +1,9 @@
+using System.Buffers.Text;
+
 namespace Domain.DTOs;
 
 public record MediaDto(
-    byte[] Bytes,
+    string Bytes,
     string FileType,
     string FileName
     );

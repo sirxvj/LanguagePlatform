@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Linq.Expressions;
-using Newtonsoft.Json.Linq;
-
 namespace Domain.Interfaces;
 
 public interface IRepository<T> where T : IEntity

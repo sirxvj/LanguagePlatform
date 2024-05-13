@@ -24,8 +24,9 @@ public class ArticlesController:ControllerBase
     {
         return Ok(await _lessonService.GetFiltered(approved:true,type: "article"));
     }
-
-    [HttpGet("unapproved")]
+    
+    
+    [HttpGet("unaprooved")]
     public async Task<ActionResult<IEnumerable<LessonDto>>> GetUnapproved()
     {
         return Ok(await _lessonService.GetFiltered(approved: false, type: "article"));

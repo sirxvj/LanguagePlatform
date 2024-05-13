@@ -13,7 +13,7 @@ public class Media:IEntity
     [MaxLength(10)]
     public string? FileType { get; set; } 
     
-    [MaxLength(50)]
+    [MaxLength(120)]
     public string? FileName { get; set; }
 
 

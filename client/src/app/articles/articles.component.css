@@ -2,3 +2,16 @@
     text-align: center;
     font-size: 120px;
 }
+.filter{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.search-bar{
+    width: 100%;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+.checks{
+    padding-left: 20px;
+}

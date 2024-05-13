@@ -1,17 +1,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<div class="container d-flex w-100 " style="padding: 60px;" >
-    <input style="margin-right: 10px;" class="w-100" type="text" name="" id="">
-    <div class="dropdown show" dropdown>
-  
-      <button class="btn btn-success dropdown-toggle"  dropdownToggle role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fa fa-plus" style="font-size: 15px;" ></i>
-        Create
-      </button>
-  
-      <div class="dropdown-menu" *dropdownMenu>
-        <a class="dropdown-item" routerLink="create-article" >Article</a>
-        <a class="dropdown-item" >Test</a>
-      </div>
+<div class="mainpg">
+  <div class="d-flex bg-white search-bar" style="padding: 60px;" >
+      <input style="margin-right: 10px;" class="w-100" type="text" name="" id="">
+      <div class="dropdown show" dropdown>
+    
+        <button class="btn btn-success dropdown-toggle"  dropdownToggle role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-plus" style="font-size: 15px;" ></i>
+          Create
+        </button>
+    
+        <div class="dropdown-menu" *dropdownMenu>
+          <a class="dropdown-item" routerLink="create-article" >Article</a>
+          <a class="dropdown-item" >Test</a>
+        </div>
+        
+    </div>
+   
   </div>
+  <!-- <div class="bg-white">  -->
+     <app-article-card *ngFor="let item of lessons | async" [lesson]="item">{{item.title}}</app-article-card>
+  <!-- </div> -->
 </div>
