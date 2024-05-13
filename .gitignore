@@ -1,8 +1,22 @@
- idea/
+**/.idea
 
- bin/
+**/bin
 
- obj/
+**/obj
 
- LangPlatform.Application/bin
- LangPlatform.Domain/obj
+**/node_modules
+
+.vscode/
+
+**/LangPlatform.Application/bin
+**/LangPlatform.Application/obj
+
+**/LangPlatform.Domain/bin
+**/LangPlatform.Domain/obj
+
+ LangPlatform.Infrastructure/bin
+ LangPlatform.Infrastructure/obj
+
+ LangPlatform.WebApi/bin
+ LangPlatform.WebApi/obj
+

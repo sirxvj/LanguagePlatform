@@ -9,10 +9,11 @@ public class Lesson:IEntity
     [Key]
     public Guid Id { get; set; }
 
+    [MaxLength(100)]
     public string Title { get; set; } = null!;
     public bool Approved { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public double Avg { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now.ToUniversalTime();
+    public double Avg { get; set; } = 0;
     
     [ForeignKey("Language")] 
     public Guid LanguageId { get; set; }

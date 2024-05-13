@@ -1,31 +1,33 @@
 using Application.Interfaces;
+using Application.Queries.Categories;
+using Application.Queries.Languages;
 using Domain.Entities;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LangPlatform.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/[controller]")]
 public class CategoriesController:ControllerBase
 {
-    private readonly ICategoryService _categoryService;
-    private readonly ILanguageService _languageService;
+    private readonly IMediator _mediator;
 
-    public CategoriesController(ICategoryService categoryService, ILanguageService languageService)
+    public CategoriesController(IMediator mediator)
     {
-        _categoryService = categoryService;
-        _languageService = languageService;
-    }
-
+        _mediator = mediator;
+    } 
     [HttpGet]
-    public async Task<ActionResult<Category>> GetDifficulty()
+    public async Task<ActionResult<IEnumerable<Category>>> GetDifficulty()
     {
-        return Ok((await _categoryService.GetAll() ?? Array.Empty<Category?>()).Select(c=>c.Name));
+        return Ok(await _mediator.Send(new GetAllCategoriesQuery()));
     }
-
+    
     [HttpGet("lang")]
-    public async Task<ActionResult<Language>> GetLanguage()
+    public async Task<ActionResult<IEnumerable<Language>>> GetLanguage()
     {
-        return Ok((await _languageService.GetAll() ?? throw new InvalidOperationException()).Select(x=>x.Name));
+        return Ok(await _mediator.Send(new GetAllLanguagesQuery()));
     }
 }

@@ -8,11 +8,13 @@ public class Test:IEntity
 {
     [Key]
     public Guid Id { get; set; }
+
+    [MaxLength(200)]
     public string Description { get; set; } = null!;
     
     [ForeignKey("Lesson")] 
     public Guid LessonId { get; set; }
 
-    public virtual ICollection<QuestionItem?> QuestionItems { get; set; }
+    public virtual ICollection<Question> Questions { get; set; }
     public virtual Lesson? Lesson { get; set; }
 }

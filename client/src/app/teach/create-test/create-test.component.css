@@ -1,0 +1,40 @@
+.lesson-picker{
+    padding: 50px 100px;
+    margin: 20px 0px;
+    background-color: white;
+ }
+ .descriptionInput{
+   width: 100%;
+ }
+ .clickable:hover{
+    border: 1px solid #dbdbdb;
+    background-color: ghostwhite;
+ }
+ img{
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+img:hover{
+    opacity: 0.7;
+}
+button{
+  font-size:25px;
+}
+.answer-box{
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px whitesmoke solid;
+  background-color: whitesmoke;
+}
+.ans-picker{
+  padding: 10px;
+  margin: 10px 0;
+}
+.trash{
+  width: 30px;
+}
+h6{
+  margin-right: 5px;
+}

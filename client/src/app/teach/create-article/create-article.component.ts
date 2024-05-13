@@ -91,7 +91,7 @@ export class CreateArticleComponent implements OnInit {
       }
       if(file){
         file.arrayBuffer().then(res=>{
-          media.bytes = this.arrayBufferToBase64String(res)
+          media.bytes = this.imageService.arrayBufferToBase64String(res)
         })
         
         media.FileName = file.name
@@ -123,13 +123,5 @@ export class CreateArticleComponent implements OnInit {
     )
     
   }
-  private arrayBufferToBase64String(buffer: ArrayBuffer) {
-    let binaryString = ''
-    var bytes = new Uint8Array(buffer);
-    for (var i = 0; i < bytes.byteLength; i++) {
-      binaryString += String.fromCharCode(bytes[i]);
-    }
   
-    return window.btoa(binaryString);
-  }
 }

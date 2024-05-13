@@ -1,0 +1,22 @@
+
+<div class="mainpg">
+    <div *ngIf="!startTest" class="lesson-picker">
+
+    <h1>{{test?.lesson?.title}}</h1>
+    <div class="img-wrapper">
+        <img src="{{imgUrl}}" alt="">
+    </div>
+    <div class="descr">
+        <hr>
+        <p>{{test?.description}}</p>
+        <hr>
+    </div>
+    <p>Questions: {{test?.questions?.length}}</p>
+    <button (click)="startTest = true" class="btn btn-success">Start test</button>
+    </div>
+    <div class="lesson-picker" *ngIf="startTest" >
+        <app-test-question [test]="test">
+
+        </app-test-question>
+    </div>
+</div>

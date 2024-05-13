@@ -6,5 +6,5 @@ public record TestObjectDto(
     Guid Id,
     string Description,
     LessonDto Lesson,
-    List<QuestionItemDto> QuestionItems
+    List<QuestionDto> Questions
     );

@@ -17,7 +17,7 @@ public class Media:IEntity
     public string? FileName { get; set; }
 
 
-    public virtual QuestionItem? QuestionItem { get; set; }
+    public virtual Question? Question { get; set; }
     public virtual Section? Section { get; set; }
     public virtual Lesson? Lesson { get; set; }
 }

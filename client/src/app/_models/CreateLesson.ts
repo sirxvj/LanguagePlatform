@@ -6,5 +6,5 @@ export interface CreateLesson{
     media:Media | undefined,// MediaDto Media,
     creatorId : string,
     categoryId : string,
-    languageId:string
+    languageId :string
 }
