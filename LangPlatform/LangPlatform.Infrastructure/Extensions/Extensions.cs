@@ -22,13 +22,13 @@ public static class Extensions
     {
         
         services.AddRepository<User>()
-            .AddRepository<AnswerItem>()
+            .AddRepository<Answer>()
             .AddRepository<Article>()
             .AddRepository<Category>()
             .AddRepository<Language>()
             .AddRepository<Lesson>()
             .AddRepository<Media>()
-            .AddRepository<QuestionItem>()
+            .AddRepository<Question>()
             .AddRepository<Review>()
             .AddRepository<Section>()
             .AddRepository<Topic>()

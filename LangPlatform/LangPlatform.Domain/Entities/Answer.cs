@@ -11,12 +11,12 @@ public class Answer:IEntity
     public Guid Id { get; set; }
 
     [MaxLength(300)]
-    public string Answer { get; set; } = null!;
+    public string AnswerBody { get; set; } = null!;
 
     public bool Accuracy { get; set; }
 
-    [ForeignKey("QuestionItem")]
-    public Guid QuestionItemId { get; set; }
+    [ForeignKey("Question")]
+    public Guid QuestionId { get; set; }
 
-    public virtual Question? QuestionItem { get; set; }
+    public virtual Question? Question { get; set; }
 }

@@ -1,6 +1,6 @@
 namespace Domain.DTOs;
 
-public record CategoryDto(
+public record LanguageDto(
     Guid Id,
     string Name
     );

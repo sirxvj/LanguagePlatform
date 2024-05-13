@@ -27,7 +27,7 @@ export class TestDetailedComponent implements OnInit {
   ngOnInit(): void {
     this.testService.getDetailed(this.router.snapshot.paramMap.get('id')??'').subscribe(
       res=>{
-        this.test = res
+        this.test = res as Test
         console.log(this.test)
         this.imageService.getImage(this.test.lesson?.media).then(x=>{
           console.log(x)

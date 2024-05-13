@@ -19,4 +19,13 @@ export class ImageService {
       else
       return ''
   }
+  public arrayBufferToBase64String(buffer: ArrayBuffer) {
+    let binaryString = ''
+    var bytes = new Uint8Array(buffer);
+    for (var i = 0; i < bytes.byteLength; i++) {
+      binaryString += String.fromCharCode(bytes[i]);
+    }
+  
+    return window.btoa(binaryString);
+  }
 }

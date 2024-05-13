@@ -1,6 +1,6 @@
 namespace Domain.DTOs;
 
 public record CreateAnswerDto(
-    string Answer,
+    string AnswerBody,
     bool Accuracy
     );

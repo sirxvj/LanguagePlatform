@@ -31,6 +31,7 @@ export class TestQuestionComponent implements OnInit{
     this.imageService.getImage(this.currentQuestion?.media).then(res=>{
       this.imgUrl = res
     })
+    console.log(this.currentQuestion)
   }
   checkAnswer(id: string){
     this.testService.checkAccuracy(id).subscribe(res=>{

@@ -2,10 +2,28 @@
     <div class="lesson-picker">
         <div class="anketa">
             <input class="search-bar" type="text" placeholder="Few words about you">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            
+            <div class="form-floating">
+            
+            <select id="langLabeled" (onchange)="changeLangSelector(communityUser.language)" [(ngModel)]="communityUser.language" class="form-select" aria-label="Language" aria-selected="" >
+                <option *ngFor="let lang of languages | async" value="{{lang.name}}">{{lang.name}}</option>
+            </select>
+            <label for="langLabeled">Language you study: </label>
+            </div>
+
+            <div class="form-floating">
+            <select id="labeledCat" class="form-select" (onchange)="changeCategorySelector(communityUser.category)" [(ngModel)]="communityUser.category" aria-label="Difficulty" >
+                <option *ngFor="let cat of categories | async" value="{{cat.name}}">{{cat.name}}</option>
+            </select>
+            <label for="labeledCat">Your level:</label>
+            </div>
+
+            <input [(ngModel)]="communityUser.Visible" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
             <label class="form-check-label" for="flexCheckChecked">
                 Show me
             </label>
+        
+            <button class="btn btn-success">Save Changes</button>
         </div>
         
         

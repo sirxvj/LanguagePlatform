@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import {Cringe} from '../../_models/Cringe';
+import { CreateTest } from '../../_models/tests/CreateTest';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,15 @@ export class TestsService {
   constructor(private http:HttpClient) { }
 
   getAllRaw(){
-    return this.http.get(this.baseUrl+'')
+    return this.http.get(this.baseUrl+'tests')
   }
-  postCringe(cringe:Cringe){
-    return this.http.post(this.baseUrl+'tests',cringe)
+  getDetailed(id:string){
+    return this.http.get(this.baseUrl+'tests/'+id)
+  }
+  checkAccuracy(id:string){
+    return this.http.get(this.baseUrl + 'tests/answers/'+id+'/accuracy')
+  }
+  postTest(test:CreateTest){
+    return this.http.post(this.baseUrl+'tests',test)
   }
 }

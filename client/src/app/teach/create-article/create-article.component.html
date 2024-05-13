@@ -6,11 +6,11 @@
         <input  [(ngModel)]="lesson.title" class="title-input" type="text" name="" id="" placeholder="Title">
         
         <select id="langLabeled" class="form-select" aria-label="Language" aria-selected="" [(ngModel)]="lesson.languageId">
-            <option *ngFor="let lang of langs" value="{{lang}}">{{lang}}</option>
+            <option *ngFor="let lang of langs" value="{{lang.id}}">{{lang.name}}</option>
         </select>
     
         <select class="form-select" aria-label="Difficulty" [(ngModel)]="lesson.categoryId">
-            <option *ngFor="let cat of categories" value="{{cat}}">{{cat}}</option>
+            <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
         </select>
         <div class="file-form">
             <label for="formFileLg" class="form-label">Choose preview image</label>

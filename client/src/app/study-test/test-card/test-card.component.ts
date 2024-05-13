@@ -3,10 +3,11 @@ import { Lesson } from '../../_models/lesson/Lesson';
 import { ImageService } from '../../_services/image.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-test-card',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,RouterLink],
   templateUrl: './test-card.component.html',
   styleUrl: './test-card.component.css'
 })

@@ -1,22 +1,23 @@
 using Domain.Entities;
 using Domain.Interfaces;
+using Infrastructure.Data;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
-namespace Application.Commands.Categories;
+namespace Application.Queries.Categories;
 
 public record GetAllCategoriesQuery : IRequest<IEnumerable<Category>>;
 
 public class GetAllCategoriesHandler : IRequestHandler<GetAllCategoriesQuery, IEnumerable<Category>>
 {
-    private readonly IRepository<Category> _repository;
-
-    public GetAllCategoriesHandler(IRepository<Category> repository)
+    private readonly DataContext _dataContext;
+    public GetAllCategoriesHandler( DataContext dataContext)
     {
-        _repository = repository;
+        _dataContext = dataContext;
     }
 
     public async Task<IEnumerable<Category>> Handle(GetAllCategoriesQuery request, CancellationToken cancellationToken)
     {
-        return await _repository.GetAllAsync();
+        return await _dataContext.Categories.ToListAsync(cancellationToken: cancellationToken);
     }
 }

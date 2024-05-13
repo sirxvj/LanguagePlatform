@@ -24,6 +24,12 @@ public static class ConfigureServices
         services.AddControllers();
         services.AddApplicationServices();
         services.AddSwaggerGen();
+
+        services.AddMediatR(opt =>
+        {
+            opt.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
+        });
+        
         services.AddDbContext<DataContext>(opt =>
         {
             opt.UseLazyLoadingProxies().UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));

@@ -10,6 +10,7 @@ import { Media } from '../../_models/lesson/Media';
 import { ArticlesService } from '../../_services/test/articles.service';
 import { AccountService } from '../../_services/account.service';
 import { take } from 'rxjs';
+import { ImageService } from '../../_services/image.service';
 
 @Component({
   selector: 'app-create-lesson',
@@ -35,6 +36,7 @@ export class CreateLessonComponent implements OnInit{
   category = ""
   constructor(private categoryService:CategorizeService,
     private accountService:AccountService,
+    private imageService:ImageService
   ){}
   ngOnInit(): void {
     this.accountService.currentUser$.pipe(take(1)).subscribe(resp=>{
@@ -75,7 +77,7 @@ export class CreateLessonComponent implements OnInit{
     }
     if(file){
       file.arrayBuffer().then(res=>{
-        media.bytes = this.arrayBufferToBase64String(res)
+        media.bytes = this.imageService.arrayBufferToBase64String(res)
       })
       
       media.FileName = file.name
@@ -83,13 +85,5 @@ export class CreateLessonComponent implements OnInit{
     }
     target.media = media
 }
-  private arrayBufferToBase64String(buffer: ArrayBuffer) {
-  let binaryString = ''
-  var bytes = new Uint8Array(buffer);
-  for (var i = 0; i < bytes.byteLength; i++) {
-    binaryString += String.fromCharCode(bytes[i]);
-  }
-
-  return window.btoa(binaryString);
-}
+  
 }

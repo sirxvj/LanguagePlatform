@@ -86,9 +86,8 @@ export class CreateTestComponent {
         }
         if(file){
           file.arrayBuffer().then(res=>{
-            this.imgService.arrayBufferToBase64String(res).then(res=>
-              media.bytes = res
-            )
+            media.bytes = this.imgService.arrayBufferToBase64String(res)
+            
           })
           
           media.FileName = file.name

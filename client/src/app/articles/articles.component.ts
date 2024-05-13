@@ -21,8 +21,8 @@ export class ArticlesComponent implements OnInit {
 
     stuff:Observable<Lesson[]> | undefined
     empty = true
+    showFilter = false
     filter:any = {}
-    langs:Language[]= []
     categories: Observable<Category[]> | undefined
     languages: Observable<Language[]> | undefined
     
@@ -58,12 +58,6 @@ export class ArticlesComponent implements OnInit {
           return res as Language[]
         }
       )
-    )
-    this.languages.subscribe(
-      x=>{
-        this.langs = x
-        console.log(this.langs)
-      }
     )
   }
   

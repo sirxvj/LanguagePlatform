@@ -21,5 +21,5 @@ public class Question:IEntity
     
     public virtual Media? Media { get; set; }
     public virtual Test? Test { get; set; }
-    public virtual ICollection<AnswerItem>? Answers { get; set; }
+    public virtual ICollection<Answer>? Answers { get; set; }
 }

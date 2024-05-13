@@ -1,24 +1,23 @@
 using Domain.Entities;
-using Domain.Interfaces;
 using Infrastructure.Data;
 using MediatR;
 
-namespace Application.Commands.Categories;
+namespace Application.Commands.Languages;
 
-public record CreateCategoryCommand(string Name):IRequest;
+public record CreateLanguageCommand(string Name):IRequest;
 
-public class CreateCategoryHandler : IRequestHandler<CreateCategoryCommand>
+public class CreateLanguageHandler : IRequestHandler<CreateLanguageCommand>
 {
     private readonly DataContext _dataContext;
-    public CreateCategoryHandler(DataContext dataContext)
+    public CreateLanguageHandler(DataContext dataContext)
     {
         _dataContext = dataContext;
     }
 
-    public async Task Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+    public async Task Handle(CreateLanguageCommand request, CancellationToken cancellationToken)
     {
-        await _dataContext.AddAsync(new Category{Name = request.Name});
-        await _dataContext.SaveChangesAsync();
+        await _dataContext.AddAsync(new Category{Name = request.Name}, cancellationToken);
+        await _dataContext.SaveChangesAsync(cancellationToken);
         
     }
 }

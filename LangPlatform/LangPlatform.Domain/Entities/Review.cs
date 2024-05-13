@@ -10,7 +10,7 @@ public class Review:IEntity
     [Key]
     public Guid Id { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now.ToUniversalTime();
     [MaxLength(200)]
     public string Title { get; set; } = null!;
     [MaxLength(1000)]
