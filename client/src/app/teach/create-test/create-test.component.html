@@ -1,0 +1,49 @@
+<div class="mainpg" >
+   <app-create-lesson [lesson]="lesson" [greetingString]="'Create your own test'"></app-create-lesson>
+    <div class="lesson-picker">
+        <textarea [(ngModel)]="description" rows="5" class="descriptionInput" placeholder="Write short description"></textarea>
+    </div>
+
+    <div class="lesson-picker" *ngFor="let item of questions;index as i">
+        <div class="d-flex" >
+            <h1 style="margin-right: 10px;">{{i+1}}</h1>
+            <input [(ngModel)]="item.title"  class="descriptionInput" type="text" placeholder="Question">
+            <img (click)="deleteQuestion(i)" class="trash" src="../../../assets/trash-can.png"  alt="">
+        </div>
+            <div>
+            <textarea [(ngModel)]="item.description" class="descriptionInput" id="Unnessasary" cols="30" rows="3" placeholder="Unnessasary remarks"></textarea>
+            <div class="file-form">
+                <label for="formFileLg" class="form-label">Choose image</label>
+                <input (change)="uploadFile($event,item)" accept="image/*" class="form-control form-control-lg" id="formFileLg" type="file">
+              </div>
+        </div>
+            <div *ngFor="let ans of item.answers;index as j">
+                <div class="answer-box">
+                    <div class="d-flex">
+                        <h6>{{j+1}} </h6>
+                        <input [(ngModel)]="ans.answerBody" class="descriptionInput" type="text" placeholder="Answer">
+                        <img (click)="deleteAnswer(item,j)" class="trash" src="../../../assets/trash-can.png"  alt="">
+                
+                    </div>
+                    <div class="form-check">
+                    <input [(ngModel)]="ans.accuracy" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Is accurate
+                    </label>
+                </div>
+            </div>
+            </div>
+        <div class="ans-picker clickable d-flex" (click)="addAnswer(item.answers)">
+            <img src="../../../assets/icons8-plus-24.png" alt="">
+            <h1 style="font-size: 30px; padding-left: 33px;">Add answer</h1>
+        </div>
+    </div>
+
+    <div class="lesson-picker clickable d-flex" (click)="addQuestion()">
+        <img src="../../../assets/icons8-plus-24.png" alt="">
+        <h1 style="font-size: 30px; padding-left: 33px;">Add question</h1>
+    </div>
+    <div class="lesson-picker">
+        <button  class="btn btn-outline-success" (click)="postTest()">Send</button>
+    </div>
+</div>

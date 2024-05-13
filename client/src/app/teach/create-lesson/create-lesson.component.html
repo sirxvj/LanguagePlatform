@@ -1,0 +1,16 @@
+<div class="lesson-picker">
+    <h1 class="global-title">{{greetingString}}</h1>
+        <input  [(ngModel)]="lesson.title" class="title-input" type="text" name="" id="" placeholder="Title">
+        
+        <select id="langLabeled" (onchange)="changeLangSelector(language)" [(ngModel)]="language" class="form-select" aria-label="Language" aria-selected="" >
+            <option *ngFor="let lang of langs" value="{{lang.name}}">{{lang.name}}</option>
+        </select>
+    
+        <select class="form-select" (onchange)="changeCategorySelector(category)" [(ngModel)]="category" aria-label="Difficulty" >
+            <option *ngFor="let cat of categories" value="{{cat.name}}">{{cat.name}}</option>
+        </select>
+        <div class="file-form">
+            <label for="formFileLg" class="form-label">Choose preview image</label>
+            <input (change)="uploadFile($event,lesson)" accept="image/*" class="form-control form-control-lg" id="formFileLg" type="file">
+          </div>
+</div>

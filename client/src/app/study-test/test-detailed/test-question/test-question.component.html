@@ -1,0 +1,21 @@
+<div>
+    <div *ngIf="index!=-1">
+        <div class="img-wrapper">
+            <img src="{{imgUrl}}" alt="">
+        </div>
+        <h1>
+            {{currentQuestion?.title}}
+        </h1>
+        <div (click)="checkAnswer(answer.id)" class="ans" *ngFor="let answer of currentQuestion?.answers">
+
+            <p>{{answer.answerBody}}</p>
+        </div>
+    </div>
+    <div *ngIf="index==-1">
+        <h1>
+            Test Completed
+        </h1>
+        <h4>Result:{{correctCounter}}/{{test?.questions?.length}}</h4>
+        <button  [routerLink]="['/tests']" routerLinkActive="router-link-active"  class="btn btn-success">Return</button>
+    </div>
+</div>
