@@ -1,37 +1,50 @@
 <div class="mainpg">
+    <div class="filter d-flex">
+        <img class="illustration" src="./../../assets/community2.jpg" alt="">
+        <div style="margin: auto;">
+            <h1>Community</h1>
+            <p>Connect with other learners and exchange feedback with native speakers.Build confidence
+                </p><p>  and learn faster together.</p>
+        </div>
+    </div>
     <div class="lesson-picker">
         <div class="anketa">
-            <input class="search-bar" type="text" placeholder="Few words about you">
+            <input [(ngModel)]="communityUser.greeting" class="search-bar" type="text" placeholder="Few words about you">
             
             <div class="form-floating">
             
-            <select id="langLabeled" (onchange)="changeLangSelector(communityUser.language)" [(ngModel)]="communityUser.language" class="form-select" aria-label="Language" aria-selected="" >
-                <option *ngFor="let lang of languages | async" value="{{lang.name}}">{{lang.name}}</option>
+            <select id="langLabeled"  [(ngModel)]="communityUser.languageId" class="form-select" aria-label="Language" aria-selected="" >
+                <option *ngFor="let lang of languages | async" value="{{lang.id}}">{{lang.name}}</option>
             </select>
+            
             <label for="langLabeled">Language you study: </label>
             </div>
 
             <div class="form-floating">
-            <select id="labeledCat" class="form-select" (onchange)="changeCategorySelector(communityUser.category)" [(ngModel)]="communityUser.category" aria-label="Difficulty" >
-                <option *ngFor="let cat of categories | async" value="{{cat.name}}">{{cat.name}}</option>
+            <select id="labeledCat" class="form-select"  [(ngModel)]="communityUser.categoryId" aria-label="Difficulty" >
+                <option *ngFor="let cat of categories | async" value="{{cat.id}}">{{cat.name}}</option>
             </select>
             <label for="labeledCat">Your level:</label>
             </div>
 
-            <input [(ngModel)]="communityUser.Visible" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <input [(ngModel)]="communityUser.visible" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
             <label class="form-check-label" for="flexCheckChecked">
                 Show me
             </label>
         
-            <button class="btn btn-success">Save Changes</button>
         </div>
-        
+        <button (click)="updateUser()" class="btn btn-success">Save Changes</button>
         
     </div>
-    <div class="body lesson-picker">
+     <div class="body lesson-picker"> <!--lesson-picker -->
         <tabset>
-          <tab heading="Find companion" id="tab1">Basic content</tab>
-          <tab heading="Friend list">Basic content 1</tab>
+          <tab [active]="!tabsSwitcher" (selectTab)="tabsSwitcher=false" heading="Find companion" id="tab1">
+            <div class="row">
+                <app-userform-card class="col-md-4" *ngFor="let form of userForms | async" [form]="form" (sendMessageEvent)="changeTab($event)"></app-userform-card>
+            </div>
+           
+          </tab>
+          <tab [active]="tabsSwitcher"  heading="Friend list" >Basic content 1</tab>
         </tabset>
   </div>
 </div>

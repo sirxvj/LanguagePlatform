@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities;
 
-public class PublishUser
+public class UserForm
 {
     [Key] 
     public Guid Id { get; set; }
@@ -22,7 +22,7 @@ public class PublishUser
     [ForeignKey("Category")] 
     public Guid CategoryId { get; set; }
 
-    public Language? Language { get; set; }
-    public Category? Category { get; set; }
-    public User? User { get; set; }
+    public virtual Language? Language { get; set; }
+    public virtual Category? Category { get; set; }
+    public virtual User? User { get; set; }
 }

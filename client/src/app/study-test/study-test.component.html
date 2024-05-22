@@ -1,4 +1,11 @@
 <div class="mainpg">
+    <div class="filter d-flex">
+        <img class="illustration" src="./../../assets/testsIll.png" alt="">
+        <div style="margin: auto;">
+            <h1>Tests made by community</h1>
+            <h5>Enchance your language skills with fun</h5>
+        </div>
+    </div>
     <div class="filter">
         <input [(ngModel)]="filter.bar" class="search-bar" type="text" placeholder="Keywords">
        
@@ -32,5 +39,6 @@
     </div>
     <div class="row">
         <app-test-card class="col-md-4" *ngFor="let lesson of lessons| async" [lesson]="lesson"></app-test-card>
+       
     </div>
 </div>

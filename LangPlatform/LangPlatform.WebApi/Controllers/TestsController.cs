@@ -50,4 +50,11 @@ public class TestsController:ControllerBase
     {
         return Ok(await _mediator.Send(new GetTestQuery(id)));
     }
+    
+    [HttpGet("unaprooved")]
+    public async Task<ActionResult<IEnumerable<LessonDto>>> GetUnapproved()
+    {
+        return Ok(await _mediator.Send(
+            new GetLessonsFilteredQuery(Approved:false,Type:LessonType.Test)));
+    }
 }

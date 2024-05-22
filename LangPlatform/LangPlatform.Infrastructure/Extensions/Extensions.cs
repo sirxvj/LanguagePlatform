@@ -31,7 +31,6 @@ public static class Extensions
             .AddRepository<Question>()
             .AddRepository<Review>()
             .AddRepository<Section>()
-            .AddRepository<Topic>()
             .AddRepository<Test>();
         
         

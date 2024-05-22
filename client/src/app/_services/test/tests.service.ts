@@ -24,4 +24,7 @@ export class TestsService {
   postTest(test:CreateTest){
     return this.http.post(this.baseUrl+'tests',test)
   }
+  getAllUnaprooved(){
+    return this.http.get(this.baseUrl+'tests/unaprooved')
+  }
 }

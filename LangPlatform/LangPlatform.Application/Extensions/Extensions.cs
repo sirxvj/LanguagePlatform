@@ -33,5 +33,9 @@ public static class Extensions
         TypeAdapterConfig<Media, MediaDto>
             .NewConfig()
             .Map(dest => dest.Bytes, src => Convert.ToBase64String(src.Bytes ?? Array.Empty<byte>()));
+
+        TypeAdapterConfig<UserForm, UserFormUserDto>
+            .NewConfig()
+            .Map(dest => dest.Username, src => src.User!.Username);
     }
 }

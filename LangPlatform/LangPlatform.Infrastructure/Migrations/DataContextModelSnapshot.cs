@@ -25,7 +25,7 @@ namespace Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.AnswerItem", b =>
+            modelBuilder.Entity("Domain.Entities.Answer", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,19 +34,19 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("Accuracy")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("Answer")
+                    b.Property<string>("AnswerBody")
                         .IsRequired()
                         .HasMaxLength(300)
                         .HasColumnType("character varying(300)");
 
-                    b.Property<Guid>("QuestionItemId")
+                    b.Property<Guid>("QuestionId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("QuestionItemId");
+                    b.HasIndex("QuestionId");
 
-                    b.ToTable("AnswerItems");
+                    b.ToTable("Answers");
                 });
 
             modelBuilder.Entity("Domain.Entities.Article", b =>
@@ -79,6 +79,23 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Friends", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnOrder(0);
+
+                    b.Property<Guid>("User2Id")
+                        .HasColumnType("uuid")
+                        .HasColumnOrder(1);
+
+                    b.HasKey("UserId", "User2Id");
+
+                    b.HasIndex("User2Id");
+
+                    b.ToTable("Friends");
                 });
 
             modelBuilder.Entity("Domain.Entities.Language", b =>
@@ -125,7 +142,8 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
 
@@ -163,7 +181,7 @@ namespace Infrastructure.Migrations
                     b.ToTable("Medias");
                 });
 
-            modelBuilder.Entity("Domain.Entities.QuestionItem", b =>
+            modelBuilder.Entity("Domain.Entities.Question", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -192,7 +210,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TestId");
 
-                    b.ToTable("QuestionItems");
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("Domain.Entities.Review", b =>
@@ -272,7 +290,8 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<Guid>("LessonId")
                         .HasColumnType("uuid");
@@ -283,25 +302,6 @@ namespace Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Tests");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Topic", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Topics");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
@@ -336,15 +336,50 @@ namespace Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Domain.Entities.AnswerItem", b =>
+            modelBuilder.Entity("Domain.Entities.UserForm", b =>
                 {
-                    b.HasOne("Domain.Entities.QuestionItem", "QuestionItem")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Greeting")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<Guid>("LanguageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("Visible")
+                        .HasColumnType("boolean");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("UserForms");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Answer", b =>
+                {
+                    b.HasOne("Domain.Entities.Question", "Question")
                         .WithMany("Answers")
-                        .HasForeignKey("QuestionItemId")
+                        .HasForeignKey("QuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("QuestionItem");
+                    b.Navigation("Question");
                 });
 
             modelBuilder.Entity("Domain.Entities.Article", b =>
@@ -356,6 +391,25 @@ namespace Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Lesson");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Friends", b =>
+                {
+                    b.HasOne("Domain.Entities.User", "User2")
+                        .WithMany()
+                        .HasForeignKey("User2Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+
+                    b.Navigation("User2");
                 });
 
             modelBuilder.Entity("Domain.Entities.Lesson", b =>
@@ -391,14 +445,14 @@ namespace Infrastructure.Migrations
                     b.Navigation("Media");
                 });
 
-            modelBuilder.Entity("Domain.Entities.QuestionItem", b =>
+            modelBuilder.Entity("Domain.Entities.Question", b =>
                 {
                     b.HasOne("Domain.Entities.Media", "Media")
-                        .WithOne("QuestionItem")
-                        .HasForeignKey("Domain.Entities.QuestionItem", "MediaId");
+                        .WithOne("Question")
+                        .HasForeignKey("Domain.Entities.Question", "MediaId");
 
                     b.HasOne("Domain.Entities.Test", "Test")
-                        .WithMany("QuestionItems")
+                        .WithMany("Questions")
                         .HasForeignKey("TestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -455,6 +509,33 @@ namespace Infrastructure.Migrations
                     b.Navigation("Lesson");
                 });
 
+            modelBuilder.Entity("Domain.Entities.UserForm", b =>
+                {
+                    b.HasOne("Domain.Entities.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Language", "Language")
+                        .WithMany()
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithOne("UserForm")
+                        .HasForeignKey("Domain.Entities.UserForm", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Language");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domain.Entities.Article", b =>
                 {
                     b.Navigation("Sections");
@@ -483,24 +564,26 @@ namespace Infrastructure.Migrations
                 {
                     b.Navigation("Lesson");
 
-                    b.Navigation("QuestionItem");
+                    b.Navigation("Question");
 
                     b.Navigation("Section");
                 });
 
-            modelBuilder.Entity("Domain.Entities.QuestionItem", b =>
+            modelBuilder.Entity("Domain.Entities.Question", b =>
                 {
                     b.Navigation("Answers");
                 });
 
             modelBuilder.Entity("Domain.Entities.Test", b =>
                 {
-                    b.Navigation("QuestionItems");
+                    b.Navigation("Questions");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.Navigation("Lessons");
+
+                    b.Navigation("UserForm");
                 });
 #pragma warning restore 612, 618
         }

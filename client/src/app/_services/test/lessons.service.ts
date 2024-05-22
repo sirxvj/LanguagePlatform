@@ -14,6 +14,10 @@ export class LessonsService {
     
   }
 
+  approve(id:string){
+    return this.http.put(this.baseUrl+'lessons/'+id+'/approve',true)
+  }
+
   getReviews(id:string){
     return this.http.get(this.baseUrl+'lessons/'+id+'/reviews')
   }

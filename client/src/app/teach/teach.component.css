@@ -3,6 +3,9 @@
     margin-bottom: 10px;
     /* width: 4-; */
 }
-.app-article-card{
-   
+.danger{
+    border: rgb(255, 104, 104) solid 1px;
+    padding: 10px;
+    color: rgb(255, 104, 104);
+    border-radius: 10px;
 }

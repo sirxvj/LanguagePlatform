@@ -26,7 +26,7 @@ namespace Application.Services
             var creds = new SigningCredentials(_key,SecurityAlgorithms.HmacSha256Signature);
 
             var descriptor = new SecurityTokenDescriptor{
-                Expires = DateTime.Now.AddHours(4),
+                Expires = DateTime.Now.AddMinutes(1),
                 SigningCredentials = creds,
                 Subject = new ClaimsIdentity(claims) 
             };

@@ -9,6 +9,7 @@ import { authGuard } from './_guards/auth.guard';
 import { ToastrModule, provideToastr } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { loadingInterceptor } from './_interceptors/loading.interceptor';
+import { errorInterceptor } from './_interceptors/error.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,7 +22,7 @@ export const appConfig: ApplicationConfig = {
         type:'ball-clip-rotate'
       })),
     provideToastr({positionClass: 'toast-bottom-right'} ),
-    provideHttpClient(withInterceptors([jwtInterceptor,loadingInterceptor])),
+    provideHttpClient(withInterceptors([jwtInterceptor,loadingInterceptor,errorInterceptor])),
     
   ]
 };

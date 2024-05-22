@@ -1,0 +1,36 @@
+.card{
+    overflow: hidden;
+    margin: 10px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    max-height: 400px;
+    transition: 500ms;
+    margin: 50px;
+    /* background: linear-gradient(90deg, rgb(115, 0, 255) 0%,  rgb(204, 0, 255) 100%); */
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 500ms;
+}
+.body{
+    padding: 10px;
+}
+.fakeimg{
+    min-height: 180px;
+    max-height: 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+h3{
+    text-shadow: white 0px 0px 5px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+button{
+    margin-right: 10px;
+}

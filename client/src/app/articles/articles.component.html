@@ -1,10 +1,21 @@
 <div class="mainpg">
+
+    <div class="filter d-flex">
+        <img class="illustration" src="./../../assets/articlesIll.png" alt="">
+        <div style="margin: auto;">
+            <h1>Articles about everything</h1>
+            <p>Articles, made by enthusiasts, grouped by language and difficultu level</p>
+        </div>
+    </div>
+
     <div class="filter">
+
+
         <input [(ngModel)]="filter.bar" class="search-bar" type="text" placeholder="Keywords">
        
         
         <div class="d-flex " *ngIf="showFilter">
-            <label for="labledDiv">Languages:</label>   
+            
             <div id="labledDiv" class="checks" >
                 <div *ngFor="let language of languages | async;index as i" class="form-check">
                     <p></p>
@@ -13,10 +24,11 @@
                       {{language.name}}
                     </label>
                 </div>
-                  
+                
             </div>
-           
-            <label for="labledDiv2">Difficulty:</label>
+            <label for="labledDiv">Languages:</label>   
+            <!--  -->
+            <p>Difficulty</p>
                 <div id="labledDiv2" class="checks">
                     <div *ngFor="let cat of categories | async" class="form-check">
                         <input class="form-check-input" type="checkbox" value="1" [id]="cat.id">
@@ -26,6 +38,7 @@
                     </div>
                       
                 </div>
+                <label for="labledDiv2">Difficulty:</label>
             
         </div>
         <button class="btn btn-success" (click)="showFilter = !showFilter">{{showFilter?"Hide Filter":"Show Filter"}}</button>

@@ -27,7 +27,10 @@ export class LoginComponent {
 login() {
   console.log(this.model)
   this.accountService.login(this.model).subscribe(responce=>{
+    console.log(localStorage.getItem('user'))
+    console.log(this.accountService.currentUser$)
     this.toastr.success('OK','Logged In')
+    setTimeout(()=>100)
     this.router.navigateByUrl('/tests')
   },error=>{
     this.toastr.error(error.error,'Error')

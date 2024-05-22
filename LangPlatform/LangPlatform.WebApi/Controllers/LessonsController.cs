@@ -36,4 +36,12 @@ public class LessonsController:ControllerBase
         await _mediator.Send(new CreateReviewCommand(review));
         return Ok();
     }
+
+    [HttpPut("{id}/approve")]
+    [Authorize(Roles = "Admin")]
+    public async Task<ActionResult> Approve([FromRoute]Guid id,[FromBody]bool state)
+    {
+        await _mediator.Send(new ApproveLessonCommand(id));
+        return Ok();
+    }
 }

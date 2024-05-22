@@ -20,6 +20,7 @@ public class User:IEntity
     
     public RoleType Role { get; set; }
     
+    public virtual UserForm? UserForm { get; set; }
     public virtual ICollection<Lesson>? Lessons { get; set; }
 }
 

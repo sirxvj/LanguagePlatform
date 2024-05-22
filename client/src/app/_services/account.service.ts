@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {map} from 'rxjs/operators'
-
+import { jwtDecode } from 'jwt-decode';
 import { Observable, ReplaySubject } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 import { User } from '../_models/User';
@@ -52,5 +52,11 @@ export class AccountService {
   logout(){
     localStorage.removeItem('user')
     this.currentUserSource.next(null)
+  }
+
+  isAdmin(){
+    const token = JSON.parse(localStorage.getItem('user')??'').token
+    const result:any = jwtDecode(token)
+    return result.role=="Admin"
   }
 }

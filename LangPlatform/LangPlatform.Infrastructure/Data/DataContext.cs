@@ -1,3 +1,4 @@
+using Domain.DTOs;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +8,8 @@ namespace Infrastructure.Data;
 public class DataContext : DbContext
 {
     public DbSet<User> Users { get; set; } = null!;
-    public DbSet<Topic> Topics { get; set; } = null!;
+    public DbSet<UserForm> UserForms { get; set; } = null!;
+    
     public DbSet<Test> Tests { get; set; } = null!;
     public DbSet<Section> Sections { get; set; } = null!;
     public DbSet<Review> Reviews { get; set; } = null!;
@@ -18,7 +20,12 @@ public class DataContext : DbContext
     public DbSet<Category> Categories { get; set; } = null!;
     public DbSet<Article> Articles { get; set; } = null!;
     public DbSet<Answer> Answers { get; set; } = null!;
-    
+
+    public DbSet<Friends> Friends { get; set; }
     public DataContext(DbContextOptions options):base(options)
     {}
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+    }
 }

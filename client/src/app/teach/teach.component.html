@@ -1,5 +1,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="mainpg">
+  <div class="filter d-flex">
+    <img class="illustration" src="./../../assets/teach.webp" alt="">
+    <div style="margin: auto;">
+      <h1>Have something to share?</h1>
+      <p>Here you can share your knowledge with others. And if you an admin approve someone`s work.</p>
+      <p class="danger">Be careful! Here are listed unapproved lessons and they can contain everything!</p>
+    </div>
+  </div>
   <div class="d-flex bg-white search-bar" style="padding: 60px;" >
       <input style="margin-right: 10px;" class="w-100" type="text" name="" id="">
       <div class="dropdown show" dropdown>
@@ -15,9 +23,22 @@
         </div>
         
     </div>
-   
+    
+  </div>
+  <div class="bg-white" style="border-radius: 10px;">
+    <tabset>
+      <tab heading="Tests">
+        <app-unapproved-test-card *ngFor="let item of tests | async" [lesson]="item" >{{item.title}}</app-unapproved-test-card>
+      </tab>
+
+      <tab heading="Articles">
+        <app-unapproved-article-card *ngFor="let item of articles | async" [lesson]="item" >{{item.title}}</app-unapproved-article-card>
+      </tab>
+    </tabset>
+
   </div>
   <!-- <div class="bg-white">  -->
-     <app-article-card *ngFor="let item of lessons | async" [lesson]="item">{{item.title}}</app-article-card>
+     <!-- <app-article-card *ngFor="let item of lessons | async" [lesson]="item" >{{item.title}}</app-article-card> -->
   <!-- </div> -->
+    
 </div>

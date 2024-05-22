@@ -10,6 +10,7 @@
     margin-bottom: 20px;
 }
 .lesson-picker{
+    border-radius: 10px;
     padding: 50px 100px;
     margin: 20px 0px;
     background-color: white;
@@ -19,4 +20,9 @@
     padding: 20px;
     margin-bottom: 20px;
     background-color: white;
+    border-radius: 10px;
+}
+.illustration{
+    width: 200px;
+    height: 200px;
 }

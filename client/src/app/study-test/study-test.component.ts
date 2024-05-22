@@ -19,6 +19,7 @@ import { TestCardComponent } from "./test-card/test-card.component";
 })
 export class StudyTestComponent implements OnInit {
   
+  empty = true
   showFilter = false
   filter:any = {}
   categories: Observable<Category[]> | undefined
@@ -36,7 +37,7 @@ export class StudyTestComponent implements OnInit {
     this.lessons = this.testService.getAllRaw() as Observable<Lesson[]>
     this.lessons.subscribe(
       res=>{
-        console.log(res)
+        this.empty = false
       }
     )
   }
